@@ -1,0 +1,220 @@
+{
+  "recipes": [
+    {
+      "id": null,
+      "title": "Wikingerpfanne",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 30,
+      "diets": ["meat"],
+      "instructions": "",
+      "lowFodmap": false,
+      "occasions": [],
+      "sustainable": false,
+      "vegan": false,
+      "vegetarian": false,
+      "extendedIngredients": [],
+      "summary": ""
+    },
+    {
+      "id": null,
+      "title": "Spaghetti Carbonara",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 25,
+      "diets": ["meat"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Spaghetti Alfonso",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 20,
+      "diets": ["vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Geschnetzeltes",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 35,
+      "diets": ["meat"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Nudeln mit Tomatensoße (Hack)",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 30,
+      "diets": ["meat", "vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Hirtenpfanne Mykonos",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 35,
+      "diets": ["meat"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Käsespätzle",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 30,
+      "diets": ["meat", "vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Brokkoli Sesam Nudelauflauf",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 40,
+      "diets": ["vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Rigatoni Tripanese",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 25,
+      "diets": ["vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Pizza",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 60,
+      "diets": ["meat", "vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Salat Nicoise",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 25,
+      "diets": ["fish"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Brotsalat",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 20,
+      "diets": ["vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Lasagne",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 75,
+      "diets": ["meat", "vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Burger",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 40,
+      "diets": ["meat"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Pitataschen",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 30,
+      "diets": ["meat", "vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Pfannekuchen",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 25,
+      "diets": ["meat", "vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Gemüseeintopf",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 40,
+      "diets": ["vegan"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Minestrone",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 35,
+      "diets": ["vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Linseneintopf",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 35,
+      "diets": ["vegan"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Kartoffelsuppe",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 30,
+      "diets": ["vegetarian"],
+      "extendedIngredients": [],
+      "analyzedInstructions": []
+    },
+    {
+      "id": null,
+      "title": "Smashed Potatoes",
+      "image": "",
+      "imageType": "jpg",
+      "readyInMinutes": 30,
+      "diets": ["vegetarian"],
+      "extendedIngredients": ["Kartoffen", "Kräuterquark", "Kräuterbutter"],
+      "analyzedInstructions": []
+    }
+  ]
+}

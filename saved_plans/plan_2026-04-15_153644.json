@@ -1,0 +1,2411 @@
+{
+  "name": "Plan 13.04.2026",
+  "created": "2026-04-15T15:36:44.559180",
+  "dates": {
+    "days": [
+      {
+        "date": "13.04.2026",
+        "is_weekend": false,
+        "name": "Montag"
+      },
+      {
+        "date": "14.04.2026",
+        "is_weekend": false,
+        "name": "Dienstag"
+      },
+      {
+        "date": "15.04.2026",
+        "is_weekend": false,
+        "name": "Mittwoch"
+      },
+      {
+        "date": "16.04.2026",
+        "is_weekend": false,
+        "name": "Donnerstag"
+      },
+      {
+        "date": "17.04.2026",
+        "is_weekend": false,
+        "name": "Freitag"
+      },
+      {
+        "date": "18.04.2026",
+        "is_weekend": true,
+        "name": "Samstag"
+      },
+      {
+        "date": "19.04.2026",
+        "is_weekend": true,
+        "name": "Sonntag"
+      }
+    ],
+    "end": "19.04.2026",
+    "start": "13.04.2026"
+  },
+  "plan": [
+    {
+      "aggregateLikes": 3,
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "equipment": [
+                {
+                  "id": 404631,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/grater.jpg",
+                  "localizedName": "grater",
+                  "name": "grater"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 10811529,
+                  "image": "tomato.png",
+                  "localizedName": "heirloom tomato",
+                  "name": "heirloom tomato"
+                },
+                {
+                  "id": 1041009,
+                  "image": "cheddar-cheese.png",
+                  "localizedName": "cheese",
+                  "name": "cheese"
+                }
+              ],
+              "number": 1,
+              "step": "Grate 2 Heirloom Tomatoes with a cheese grater"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 10811529,
+                  "image": "tomato.png",
+                  "localizedName": "heirloom tomato",
+                  "name": "heirloom tomato"
+                }
+              ],
+              "number": 2,
+              "step": "Dice remaining 3 OG Heirloom Tomatoes and set aside"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 2044,
+                  "image": "basil.jpg",
+                  "localizedName": "basil",
+                  "name": "basil"
+                }
+              ],
+              "number": 3,
+              "step": "Chop Basil and set aside"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 4053,
+                  "image": "olive-oil.jpg",
+                  "localizedName": "olive oil",
+                  "name": "olive oil"
+                },
+                {
+                  "id": 11215,
+                  "image": "garlic.png",
+                  "localizedName": "garlic",
+                  "name": "garlic"
+                },
+                {
+                  "id": 0,
+                  "image": "fresh-ground-beef.jpg",
+                  "localizedName": "ground meat",
+                  "name": "ground meat"
+                }
+              ],
+              "number": 4,
+              "step": "Mince Garlic and saute in 1 Tablespoon Olive Oil till lightly golden stir often"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 14106,
+                  "image": "white-wine.jpg",
+                  "localizedName": "dry white wine",
+                  "name": "dry white wine"
+                }
+              ],
+              "number": 5,
+              "step": "Add Dry White Wine let reduce till syrupy"
+            },
+            {
+              "equipment": [
+                {
+                  "id": 404752,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/stock-pot.jpg",
+                  "localizedName": "pot",
+                  "name": "pot"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 4053,
+                  "image": "olive-oil.jpg",
+                  "localizedName": "olive oil",
+                  "name": "olive oil"
+                },
+                {
+                  "id": 20420,
+                  "image": "https://spoonacular.com/cdn/ingredients_100x100/fusilli.jpg",
+                  "localizedName": "pasta",
+                  "name": "pasta"
+                },
+                {
+                  "id": 14412,
+                  "image": "water.png",
+                  "localizedName": "water",
+                  "name": "water"
+                },
+                {
+                  "id": 2047,
+                  "image": "salt.jpg",
+                  "localizedName": "salt",
+                  "name": "salt"
+                },
+                {
+                  "id": 14084,
+                  "image": "red-wine.jpg",
+                  "localizedName": "wine",
+                  "name": "wine"
+                }
+              ],
+              "number": 6,
+              "step": "While Wine is reducing add some salt and some olive oil to a pot of water and bring to a boil for the pasta"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 1012047,
+                  "image": "salt.jpg",
+                  "localizedName": "sea salt",
+                  "name": "sea salt"
+                },
+                {
+                  "id": 11529,
+                  "image": "tomato.png",
+                  "localizedName": "tomato",
+                  "name": "tomato"
+                }
+              ],
+              "number": 7,
+              "step": "Add grated and diced Tomatoes and Sea Salt"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 4053,
+                  "image": "olive-oil.jpg",
+                  "localizedName": "olive oil",
+                  "name": "olive oil"
+                }
+              ],
+              "number": 8,
+              "step": "Add 1/2 cup Olive Oil"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 20420,
+                  "image": "https://spoonacular.com/cdn/ingredients_100x100/fusilli.jpg",
+                  "localizedName": "pasta",
+                  "name": "pasta"
+                }
+              ],
+              "number": 9,
+              "step": "Turn down to med low and make pasta according to package directions"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 2044,
+                  "image": "basil.jpg",
+                  "localizedName": "basil",
+                  "name": "basil"
+                }
+              ],
+              "number": 10,
+              "step": "Add chopped Basil a little at a time"
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 11529,
+                  "image": "tomato.png",
+                  "localizedName": "tomato",
+                  "name": "tomato"
+                }
+              ],
+              "number": 11,
+              "step": "Cook until Tomatoes are hot and soft"
+            }
+          ]
+        }
+      ],
+      "cheap": false,
+      "cookingMinutes": null,
+      "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+      "cuisines": [],
+      "dairyFree": true,
+      "date": "13.04.2026",
+      "day_index": 0,
+      "day_name": "Montag",
+      "diet_type": "meat",
+      "diets": [
+        "dairy free"
+      ],
+      "dishTypes": [
+        "side dish",
+        "lunch",
+        "main course",
+        "main dish",
+        "dinner"
+      ],
+      "extendedIngredients": [
+        {
+          "aisle": "Pasta and Rice",
+          "amount": 16,
+          "consistency": "SOLID",
+          "id": 20420,
+          "image": "fusilli.jpg",
+          "measures": {
+            "metric": {
+              "amount": 453.592,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 16,
+              "unitLong": "ounces",
+              "unitShort": "oz"
+            }
+          },
+          "meta": [],
+          "name": "og pasta",
+          "nameClean": "og pasta",
+          "original": "1 16 oz Bag Of OG Pasta",
+          "originalName": "Of OG Pasta",
+          "unit": "oz"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 5,
+          "consistency": "SOLID",
+          "id": 10811529,
+          "image": "tomato.png",
+          "measures": {
+            "metric": {
+              "amount": 5,
+              "unitLong": "",
+              "unitShort": ""
+            },
+            "us": {
+              "amount": 5,
+              "unitLong": "",
+              "unitShort": ""
+            }
+          },
+          "meta": [
+            "organic"
+          ],
+          "name": "heirloom tomatoes",
+          "nameClean": "heirloom tomatoes",
+          "original": "5 Organic Heirloom Tomatoes",
+          "originalName": "Organic Heirloom Tomatoes",
+          "unit": ""
+        },
+        {
+          "aisle": "Produce",
+          "amount": 0.33333334,
+          "consistency": "SOLID",
+          "id": 2044,
+          "image": "fresh-basil.jpg",
+          "measures": {
+            "metric": {
+              "amount": 8,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 0.33333334,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [
+            "fresh",
+            "organic"
+          ],
+          "name": "basil",
+          "nameClean": "basil",
+          "original": "1/3 cup Organic Fresh Basil",
+          "originalName": "Organic Fresh Basil",
+          "unit": "cup"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 4,
+          "consistency": "SOLID",
+          "id": 11215,
+          "image": "garlic.png",
+          "measures": {
+            "metric": {
+              "amount": 4,
+              "unitLong": "small cloves",
+              "unitShort": "small cloves"
+            },
+            "us": {
+              "amount": 4,
+              "unitLong": "small cloves",
+              "unitShort": "small cloves"
+            }
+          },
+          "meta": [
+            "organic"
+          ],
+          "name": "garlic",
+          "nameClean": "garlic",
+          "original": "3 large or 4 small cloves of Organic Garlic",
+          "originalName": "large or of Organic Garlic",
+          "unit": "small cloves"
+        },
+        {
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "amount": 1,
+          "consistency": "LIQUID",
+          "id": 1034053,
+          "image": "olive-oil.jpg",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "Tbsp",
+              "unitShort": "Tbsp"
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "Tbsp",
+              "unitShort": "Tbsp"
+            }
+          },
+          "meta": [
+            "organic"
+          ],
+          "name": "extra virgin olive",
+          "nameClean": "extra virgin olive",
+          "original": "1 Tablespoon plus 1/2 cup of Organic Extra Virgin Olive",
+          "originalName": "Organic Extra Virgin Olive",
+          "unit": "Tablespoon"
+        },
+        {
+          "aisle": "Alcoholic Beverages",
+          "amount": 0.33333334,
+          "consistency": "LIQUID",
+          "id": 14106,
+          "image": "white-wine.jpg",
+          "measures": {
+            "metric": {
+              "amount": 80,
+              "unitLong": "milliliters",
+              "unitShort": "ml"
+            },
+            "us": {
+              "amount": 0.33333334,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [
+            "dry white"
+          ],
+          "name": "wine",
+          "nameClean": "wine",
+          "original": "1/3 cup of Dry White Wine",
+          "originalName": "Dry White Wine",
+          "unit": "cup"
+        },
+        {
+          "aisle": "Spices and Seasonings",
+          "amount": 1,
+          "consistency": "SOLID",
+          "id": 1012047,
+          "image": "salt.jpg",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "teaspoon",
+              "unitShort": "tsp"
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "teaspoon",
+              "unitShort": "tsp"
+            }
+          },
+          "meta": [
+            "to taste"
+          ],
+          "name": "sea salt or",
+          "nameClean": "sea salt or",
+          "original": "1 Teaspoon Sea Salt or to taste",
+          "originalName": "Sea Salt or to taste",
+          "unit": "Teaspoon"
+        }
+      ],
+      "gaps": "no",
+      "glutenFree": false,
+      "healthScore": 37,
+      "id": 646626,
+      "image": "https://img.spoonacular.com/recipes/646626-312x231.jpg",
+      "imageType": "jpg",
+      "ingredients": [
+        "1 16-Unzen-Beutel mit OG-Nudeln",
+        "5 Bio-Heirloom-Tomaten",
+        "1/3 Tasse frisches Bio-Basilikum",
+        "3 große oder 4 kleine Zehen Bio-Knoblauch",
+        "1 Esslöffel plus 1/2 Tasse Bio-Oliven extra vergine",
+        "1/3 Tasse trockener Weißwein",
+        "1 Teelöffel Meersalz oder nach Geschmack"
+      ],
+      "ingredients_en": [
+        "1 16 oz Bag Of OG Pasta",
+        "5 Organic Heirloom Tomatoes",
+        "1/3 cup Organic Fresh Basil",
+        "3 large or 4 small cloves of Organic Garlic",
+        "1 Tablespoon plus 1/2 cup of Organic Extra Virgin Olive",
+        "1/3 cup of Dry White Wine",
+        "1 Teaspoon Sea Salt or to taste"
+      ],
+      "instructions_en": "1. Grate 2 Heirloom Tomatoes with a cheese grater\n2. Dice remaining 3 OG Heirloom Tomatoes and set aside\n3. Chop Basil and set aside\n4. Mince Garlic and saute in 1 Tablespoon Olive Oil till lightly golden stir often\n5. Add Dry White Wine let reduce till syrupy\n6. While Wine is reducing add some salt and some olive oil to a pot of water and bring to a boil for the pasta\n7. Add grated and diced Tomatoes and Sea Salt\n8. Add 1/2 cup Olive Oil\n9. Turn down to med low and make pasta according to package directions\n10. Add chopped Basil a little at a time\n11. Cook until Tomatoes are hot and soft",
+      "instructions_text": "1. Reiben Sie 2 alte Tomaten mit einer Käsereibe\n2. Die restlichen 3 OG Heirloom-Tomaten würfeln und beiseite stellen\n3. Basilikum hacken und beiseite stellen\n4. Knoblauch zerkleinern und in 1 Esslöffel Olivenöl anbraten, bis er leicht goldbraun ist, dabei oft umrühren\n5. Trockenen Weißwein hinzufügen und einkochen lassen, bis er sirupartig ist\n6. Während der Wein reduziert wird, etwas Salz und etwas Olivenöl in einen Topf mit Wasser geben und für die Nudeln zum Kochen bringen\n7. Geriebene und gewürfelte Tomaten und Meersalz hinzufügen\n8. 1/2 Tasse Olivenöl hinzufügen\n9. Stellen Sie die Temperatur auf mittlere Stufe herunter und bereiten Sie die Nudeln gemäß den Anweisungen in der Packung zu\n10. Gehacktes Basilikum nach und nach hinzufügen\n11. Kochen, bis die Tomaten heiß und weich sind",
+      "language": "en",
+      "license": "CC BY 3.0",
+      "likes": 0,
+      "lowFodmap": false,
+      "missedIngredientCount": 5,
+      "missedIngredients": [
+        {
+          "aisle": "Pasta and Rice",
+          "amount": 16,
+          "id": 20420,
+          "image": "https://img.spoonacular.com/ingredients_100x100/fusilli.jpg",
+          "meta": [],
+          "name": "og pasta",
+          "original": "1 16 oz Bag Of OG Pasta",
+          "originalName": "Of OG Pasta",
+          "unit": "oz",
+          "unitLong": "ounces",
+          "unitShort": "oz"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 5,
+          "id": 10811529,
+          "image": "https://img.spoonacular.com/ingredients_100x100/tomato.png",
+          "meta": [
+            "organic"
+          ],
+          "name": "heirloom tomatoes",
+          "original": "5 Organic Heirloom Tomatoes",
+          "originalName": "Organic Heirloom Tomatoes",
+          "unit": "",
+          "unitLong": "",
+          "unitShort": ""
+        },
+        {
+          "aisle": "Produce",
+          "amount": 0.33333334,
+          "extendedName": "fresh basil",
+          "id": 2044,
+          "image": "https://img.spoonacular.com/ingredients_100x100/fresh-basil.jpg",
+          "meta": [
+            "fresh",
+            "organic"
+          ],
+          "name": "basil",
+          "original": "1/3 cup Organic Fresh Basil",
+          "originalName": "Organic Fresh Basil",
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 4,
+          "id": 11215,
+          "image": "https://img.spoonacular.com/ingredients_100x100/garlic.png",
+          "meta": [
+            "organic"
+          ],
+          "name": "garlic",
+          "original": "3 large or 4 small cloves of Organic Garlic",
+          "originalName": "large or of Organic Garlic",
+          "unit": "small cloves",
+          "unitLong": "small cloves",
+          "unitShort": "small cloves"
+        },
+        {
+          "aisle": "Alcoholic Beverages",
+          "amount": 0.33333334,
+          "extendedName": "dry white wine",
+          "id": 14106,
+          "image": "https://img.spoonacular.com/ingredients_100x100/white-wine.jpg",
+          "meta": [
+            "dry white"
+          ],
+          "name": "wine",
+          "original": "1/3 cup of Dry White Wine",
+          "originalName": "Dry White Wine",
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        }
+      ],
+      "occasions": [],
+      "preparationMinutes": null,
+      "pricePerServing": 190,
+      "readyInMinutes": 45,
+      "servings": 4,
+      "source": "api",
+      "sourceName": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/CY6FGV5H/heirloom-tomato-basil-and-olive-oil-wine-sauce-over-pasta",
+      "spoonacularScore": 82.00956726074219,
+      "spoonacularSourceUrl": "https://spoonacular.com/heirloom-tomato-basil-and-olive-oil-wine-sauce-over-pasta-646626",
+      "summary": "The recipe Heirloom Tomato Basil and Olive Oil Wine Sauce over Pasta can be made <b>in approximately 45 minutes</b>. For <b>$1.9 per serving</b>, this recipe <b>covers 20%</b> of your daily requirements of vitamins and minerals. This recipe makes 4 servings with <b>501 calories</b>, <b>16g of protein</b>, and <b>6g of fat</b> each. Only a few people really liked this main course. 3 people have tried and liked this recipe. It is brought to you by Foodista. Head to the store and pick up og pasta, sea salt or, garlic, and a few other things to make it today. It is a good option if you're following a <b>dairy free</b> diet. All things considered, we decided this recipe <b>deserves a spoonacular score of 82%</b>. This score is excellent. If you like this recipe, you might also like recipes such as <a href=\"https://spoonacular.com/recipes/heirloom-tomato-basil-and-olive-oil-wine-sauce-over-pasta-1615507\">Heirloom Tomato Basil and Olive Oil Wine Sauce over Pasta</a>, <a href=\"https://spoonacular.com/recipes/heirloom-tomato-beet-and-burrata-salad-with-basil-oil-674361\">Heirloom Tomato, Beet and Burrata salad with Basil oil</a>, and <a href=\"https://spoonacular.com/recipes/basil-infused-olive-oil-cupcakes-with-white-wine-518720\">Basil Infused Olive Oil Cupcakes with White Wine</a>.",
+      "sustainable": false,
+      "title": "Heirloom-Tomaten-Basilikum-Olivenöl-Weinsauce über Pasta",
+      "title_en": "Heirloom Tomato Basil and Olive Oil Wine Sauce over Pasta",
+      "unusedIngredients": [],
+      "usedIngredientCount": 0,
+      "usedIngredients": [],
+      "vegan": false,
+      "vegetarian": false,
+      "veryHealthy": false,
+      "veryPopular": false,
+      "weightWatcherSmartPoints": 13
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "14.04.2026",
+      "day_index": 1,
+      "day_name": "Dienstag",
+      "diet_type": "vegan",
+      "extendedIngredients": [],
+      "id": "fixed_linseneintopf",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 35,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Linseneintopf"
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "15.04.2026",
+      "day_index": 2,
+      "day_name": "Mittwoch",
+      "diet_type": "meat",
+      "extendedIngredients": [],
+      "id": "fixed_burger",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 40,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Burger"
+    },
+    {
+      "aggregateLikes": 2,
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "equipment": [
+                {
+                  "id": 404669,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/sauce-pan.jpg",
+                  "localizedName": "sauce pan",
+                  "name": "sauce pan"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 16124,
+                  "image": "soy-sauce.jpg",
+                  "localizedName": "soy sauce",
+                  "name": "soy sauce"
+                },
+                {
+                  "id": 2053,
+                  "image": "vinegar-(white).jpg",
+                  "localizedName": "vinegar",
+                  "name": "vinegar"
+                },
+                {
+                  "id": 11216,
+                  "image": "ginger.png",
+                  "localizedName": "ginger",
+                  "name": "ginger"
+                },
+                {
+                  "id": 11990,
+                  "image": "wasabi.jpg",
+                  "localizedName": "wasabi",
+                  "name": "wasabi"
+                },
+                {
+                  "id": 19296,
+                  "image": "honey.png",
+                  "localizedName": "honey",
+                  "name": "honey"
+                },
+                {
+                  "id": 93830,
+                  "image": "mirin.jpg",
+                  "localizedName": "mirin",
+                  "name": "mirin"
+                }
+              ],
+              "number": 1,
+              "step": "In a small saucepan over medium-high heat, stir together mirin, vinegar, soy sauce, honey, ginger and wasabi to taste. ("
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 11990,
+                  "image": "wasabi.jpg",
+                  "localizedName": "wasabi",
+                  "name": "wasabi"
+                },
+                {
+                  "id": 0,
+                  "image": "",
+                  "localizedName": "glaze",
+                  "name": "glaze"
+                }
+              ],
+              "length": {
+                "number": 10,
+                "unit": "minutes"
+              },
+              "number": 2,
+              "step": "Add the wasabi incrementally, tasting as you go.)Bring to a boil. Reduce the heat to medium and cook, stirring occasionally, until glaze thickens slightly, about 5-10 minutes."
+            },
+            {
+              "equipment": [
+                {
+                  "id": 404645,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/pan.png",
+                  "localizedName": "frying pan",
+                  "name": "frying pan"
+                },
+                {
+                  "id": 404784,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/oven.jpg",
+                  "localizedName": "oven",
+                  "name": "oven",
+                  "temperature": {
+                    "number": 425,
+                    "unit": "Fahrenheit"
+                  }
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 0,
+                  "image": "pepper.jpg",
+                  "localizedName": "cracked pepper",
+                  "name": "cracked pepper"
+                },
+                {
+                  "id": 1082047,
+                  "image": "salt.jpg",
+                  "localizedName": "kosher salt",
+                  "name": "kosher salt"
+                },
+                {
+                  "id": 4053,
+                  "image": "olive-oil.jpg",
+                  "localizedName": "olive oil",
+                  "name": "olive oil"
+                },
+                {
+                  "id": 15076,
+                  "image": "https://spoonacular.com/cdn/ingredients_100x100/salmon.png",
+                  "localizedName": "salmon",
+                  "name": "salmon"
+                },
+                {
+                  "id": 4582,
+                  "image": "vegetable-oil.jpg",
+                  "localizedName": "cooking oil",
+                  "name": "cooking oil"
+                }
+              ],
+              "length": {
+                "number": 4,
+                "unit": "minutes"
+              },
+              "number": 3,
+              "step": "Remove from the heat.Preheat oven to 425F.Lightly coat an oven-proof skillet with olive oil and heat on medium-high.Season the salmon with a little kosher salt &amp; fresh cracked pepper.When the oil is hot and begins to shimmer, add the salmon, skin side up.Sear, without moving it around for 3-4 minutes.  Turn the salmon over, skin side down."
+            },
+            {
+              "equipment": [
+                {
+                  "id": 404645,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/pan.png",
+                  "localizedName": "frying pan",
+                  "name": "frying pan"
+                },
+                {
+                  "id": 404784,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/oven.jpg",
+                  "localizedName": "oven",
+                  "name": "oven"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 15076,
+                  "image": "https://spoonacular.com/cdn/ingredients_100x100/salmon.png",
+                  "localizedName": "salmon",
+                  "name": "salmon"
+                },
+                {
+                  "id": 0,
+                  "image": "",
+                  "localizedName": "glaze",
+                  "name": "glaze"
+                },
+                {
+                  "id": 0,
+                  "image": "",
+                  "localizedName": "sauce",
+                  "name": "sauce"
+                }
+              ],
+              "length": {
+                "number": 4,
+                "unit": "minutes"
+              },
+              "number": 4,
+              "step": "Brush some of the glaze onto the salmon and then place the skillet of salmon into the oven for about 4 minutes.Spoon the remainder of the sauce over the salmon and serve hot."
+            }
+          ]
+        }
+      ],
+      "cheap": false,
+      "cookingMinutes": null,
+      "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+      "cuisines": [],
+      "dairyFree": true,
+      "date": "16.04.2026",
+      "day_index": 3,
+      "day_name": "Donnerstag",
+      "diet_type": "fish",
+      "diets": [
+        "gluten free",
+        "dairy free",
+        "pescatarian"
+      ],
+      "dishTypes": [
+        "lunch",
+        "main course",
+        "main dish",
+        "dinner"
+      ],
+      "extendedIngredients": [
+        {
+          "aisle": "Produce",
+          "amount": 1,
+          "consistency": "SOLID",
+          "id": 11216,
+          "image": "ginger.png",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "teaspoon",
+              "unitShort": "tsp"
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "teaspoon",
+              "unitShort": "tsp"
+            }
+          },
+          "meta": [
+            "peeled",
+            "finely chopped"
+          ],
+          "name": "ginger root",
+          "nameClean": "ginger root",
+          "original": "1 teaspoon finely chopped, peeled ginger root",
+          "originalName": "finely chopped, peeled ginger root",
+          "unit": "teaspoon"
+        },
+        {
+          "aisle": "Nut butters, Jams, and Honey",
+          "amount": 2,
+          "consistency": "LIQUID",
+          "id": 19296,
+          "image": "honey.png",
+          "measures": {
+            "metric": {
+              "amount": 2,
+              "unitLong": "Tbsps",
+              "unitShort": "Tbsps"
+            },
+            "us": {
+              "amount": 2,
+              "unitLong": "Tbsps",
+              "unitShort": "Tbsps"
+            }
+          },
+          "meta": [],
+          "name": "honey",
+          "nameClean": "honey",
+          "original": "2 tablespoons honey",
+          "originalName": "honey",
+          "unit": "tablespoons"
+        },
+        {
+          "aisle": "Condiments",
+          "amount": 1,
+          "consistency": "LIQUID",
+          "id": 16424,
+          "image": "soy-sauce.jpg",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "Tbsp",
+              "unitShort": "Tbsp"
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "Tbsp",
+              "unitShort": "Tbsp"
+            }
+          },
+          "meta": [
+            "reduced-sodium"
+          ],
+          "name": "soy sauce",
+          "nameClean": "soy sauce",
+          "original": "1 tablespoon reduced-sodium soy sauce",
+          "originalName": "reduced-sodium soy sauce",
+          "unit": "tablespoon"
+        },
+        {
+          "aisle": "Alcoholic Beverages",
+          "amount": 3,
+          "consistency": "LIQUID",
+          "id": 14132,
+          "image": "white-wine.jpg",
+          "measures": {
+            "metric": {
+              "amount": 3,
+              "unitLong": "Tbsps",
+              "unitShort": "Tbsps"
+            },
+            "us": {
+              "amount": 3,
+              "unitLong": "Tbsps",
+              "unitShort": "Tbsps"
+            }
+          },
+          "meta": [
+            "(or vermouth)"
+          ],
+          "name": "mirin",
+          "nameClean": "mirin",
+          "original": "3 tablespoons mirin (or vermouth)",
+          "originalName": "mirin (or vermouth)",
+          "unit": "tablespoons"
+        },
+        {
+          "aisle": "Ethnic Foods",
+          "amount": 1,
+          "consistency": "LIQUID",
+          "id": 1022053,
+          "image": "rice-vinegar.png",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "Tbsp",
+              "unitShort": "Tbsp"
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "Tbsp",
+              "unitShort": "Tbsp"
+            }
+          },
+          "meta": [],
+          "name": "rice vinegar",
+          "nameClean": "rice vinegar",
+          "original": "1 tablespoon rice vinegar",
+          "originalName": "rice vinegar",
+          "unit": "tablespoon"
+        },
+        {
+          "aisle": "Seafood",
+          "amount": 12,
+          "consistency": "SOLID",
+          "id": 10115076,
+          "image": "salmon.png",
+          "measures": {
+            "metric": {
+              "amount": 340.194,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 12,
+              "unitLong": "ounces",
+              "unitShort": "oz"
+            }
+          },
+          "meta": [],
+          "name": "salmon fillets",
+          "nameClean": "salmon fillets",
+          "original": "2 salmon fillets (6 ounces each)",
+          "originalName": "salmon fillets each)",
+          "unit": "ounces"
+        },
+        {
+          "aisle": "Ethnic Foods",
+          "amount": 4,
+          "consistency": "LIQUID",
+          "id": 10011990,
+          "image": "wasabi-paste.png",
+          "measures": {
+            "metric": {
+              "amount": 4,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            },
+            "us": {
+              "amount": 4,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            }
+          },
+          "meta": [],
+          "name": "wasabi paste",
+          "nameClean": "wasabi paste",
+          "original": "4 teaspoons wasabi paste",
+          "originalName": "wasabi paste",
+          "unit": "teaspoons"
+        }
+      ],
+      "gaps": "no",
+      "glutenFree": true,
+      "healthScore": 54,
+      "id": 664975,
+      "image": "https://img.spoonacular.com/recipes/664975-312x231.jpg",
+      "imageType": "jpg",
+      "ingredients": [
+        "1 Teelöffel fein gehackte, geschälte Ingwerwurzel",
+        "2 Esslöffel Honig",
+        "1 Esslöffel natriumarme Sojasauce",
+        "3 Esslöffel Mirin (oder Wermut)",
+        "1 Esslöffel Reisessig",
+        "2 Lachsfilets (je 6 Unzen)",
+        "4 Teelöffel Wasabipaste"
+      ],
+      "ingredients_en": [
+        "1 teaspoon finely chopped, peeled ginger root",
+        "2 tablespoons honey",
+        "1 tablespoon reduced-sodium soy sauce",
+        "3 tablespoons mirin (or vermouth)",
+        "1 tablespoon rice vinegar",
+        "2 salmon fillets (6 ounces each)",
+        "4 teaspoons wasabi paste"
+      ],
+      "instructions_en": "1. In a small saucepan over medium-high heat, stir together mirin, vinegar, soy sauce, honey, ginger and wasabi to taste. (\n2. Add the wasabi incrementally, tasting as you go.)Bring to a boil. Reduce the heat to medium and cook, stirring occasionally, until glaze thickens slightly, about 5-10 minutes.\n3. Remove from the heat.Preheat oven to 425F.Lightly coat an oven-proof skillet with olive oil and heat on medium-high.Season the salmon with a little kosher salt &amp; fresh cracked pepper.When the oil is hot and begins to shimmer, add the salmon, skin side up.Sear, without moving it around for 3-4 minutes.  Turn the salmon over, skin side down.\n4. Brush some of the glaze onto the salmon and then place the skillet of salmon into the oven for about 4 minutes.Spoon the remainder of the sauce over the salmon and serve hot.",
+      "instructions_text": "1. In einem kleinen Topf bei mittlerer bis hoher Hitze Mirin, Essig, Sojasauce, Honig, Ingwer und Wasabi nach Geschmack verrühren. (\n2. Den Wasabi nach und nach hinzufügen und dabei abschmecken. Zum Kochen bringen. Reduzieren Sie die Hitze auf mittlere Stufe und kochen Sie es unter gelegentlichem Rühren etwa 5–10 Minuten lang, bis die Glasur leicht dicker wird.\n3. Vom Herd nehmen. Ofen auf 200 °C vorheizen. Eine ofenfeste Pfanne leicht mit Olivenöl bestreichen und auf mittlerer bis hoher Stufe erhitzen. Den Lachs mit etwas koscherem Salz und Salz würzen. frisch gemahlener Pfeffer. Wenn das Öl heiß ist und zu schimmern beginnt, den Lachs mit der Hautseite nach oben hinzufügen. 3-4 Minuten lang anbraten, ohne ihn zu bewegen.  Den Lachs mit der Hautseite nach unten umdrehen.\n4. Einen Teil der Glasur auf den Lachs streichen und dann die Lachspfanne für etwa 4 Minuten in den Ofen stellen. Den Rest der Soße über den Lachs löffeln und heiß servieren.",
+      "language": "en",
+      "license": "CC BY 3.0",
+      "likes": 0,
+      "lowFodmap": false,
+      "missedIngredientCount": 7,
+      "missedIngredients": [
+        {
+          "aisle": "Produce",
+          "amount": 1,
+          "id": 11216,
+          "image": "https://img.spoonacular.com/ingredients_100x100/ginger.png",
+          "meta": [
+            "peeled",
+            "finely chopped"
+          ],
+          "name": "ginger root",
+          "original": "1 teaspoon finely chopped, peeled ginger root",
+          "originalName": "finely chopped, peeled ginger root",
+          "unit": "teaspoon",
+          "unitLong": "teaspoon",
+          "unitShort": "tsp"
+        },
+        {
+          "aisle": "Nut butters, Jams, and Honey",
+          "amount": 2,
+          "id": 19296,
+          "image": "https://img.spoonacular.com/ingredients_100x100/honey.png",
+          "meta": [],
+          "name": "honey",
+          "original": "2 tablespoons honey",
+          "originalName": "honey",
+          "unit": "tablespoons",
+          "unitLong": "tablespoons",
+          "unitShort": "Tbsp"
+        },
+        {
+          "aisle": "Condiments",
+          "amount": 1,
+          "extendedName": "low sodium soy sauce",
+          "id": 16424,
+          "image": "https://img.spoonacular.com/ingredients_100x100/soy-sauce.jpg",
+          "meta": [
+            "reduced-sodium"
+          ],
+          "name": "soy sauce",
+          "original": "1 tablespoon reduced-sodium soy sauce",
+          "originalName": "reduced-sodium soy sauce",
+          "unit": "tablespoon",
+          "unitLong": "tablespoon",
+          "unitShort": "Tbsp"
+        },
+        {
+          "aisle": "Alcoholic Beverages",
+          "amount": 3,
+          "id": 14132,
+          "image": "https://img.spoonacular.com/ingredients_100x100/white-wine.jpg",
+          "meta": [
+            "(or vermouth)"
+          ],
+          "name": "mirin",
+          "original": "3 tablespoons mirin (or vermouth)",
+          "originalName": "mirin (or vermouth)",
+          "unit": "tablespoons",
+          "unitLong": "tablespoons",
+          "unitShort": "Tbsp"
+        },
+        {
+          "aisle": "Ethnic Foods",
+          "amount": 1,
+          "id": 1022053,
+          "image": "https://img.spoonacular.com/ingredients_100x100/rice-vinegar.png",
+          "meta": [],
+          "name": "rice vinegar",
+          "original": "1 tablespoon rice vinegar",
+          "originalName": "rice vinegar",
+          "unit": "tablespoon",
+          "unitLong": "tablespoon",
+          "unitShort": "Tbsp"
+        },
+        {
+          "aisle": "Seafood",
+          "amount": 12,
+          "id": 10115076,
+          "image": "https://img.spoonacular.com/ingredients_100x100/salmon.png",
+          "meta": [],
+          "name": "salmon fillets",
+          "original": "2 salmon fillets (6 ounces each)",
+          "originalName": "salmon fillets each)",
+          "unit": "ounces",
+          "unitLong": "ounces",
+          "unitShort": "oz"
+        },
+        {
+          "aisle": "Ethnic Foods",
+          "amount": 4,
+          "id": 10011990,
+          "image": "https://img.spoonacular.com/ingredients_100x100/wasabi-paste.png",
+          "meta": [],
+          "name": "wasabi paste",
+          "original": "4 teaspoons wasabi paste",
+          "originalName": "wasabi paste",
+          "unit": "teaspoons",
+          "unitLong": "teaspoons",
+          "unitShort": "tsp"
+        }
+      ],
+      "occasions": [],
+      "preparationMinutes": null,
+      "pricePerServing": 508.32,
+      "readyInMinutes": 20,
+      "servings": 2,
+      "source": "api",
+      "sourceName": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/LFLJWRX8/wasabi-honey-glazed-salmon",
+      "spoonacularScore": 86.90991973876953,
+      "spoonacularSourceUrl": "https://spoonacular.com/wasabi-honey-glazed-salmon-664975",
+      "summary": "Wasabi & Honey Glazed-Salmon is a main course that serves 2. One portion of this dish contains approximately <b>35g of protein</b>, <b>11g of fat</b>, and a total of <b>341 calories</b>. For <b>$5.08 per serving</b>, this recipe <b>covers 25%</b> of your daily requirements of vitamins and minerals. 2 people have tried and liked this recipe. A mixture of ginger root, honey, wasabi paste, and a handful of other ingredients are all it takes to make this recipe so delicious. It is brought to you by Foodista. From preparation to the plate, this recipe takes roughly <b>20 minutes</b>. It is a good option if you're following a <b>gluten free, dairy free, and pescatarian</b> diet. Overall, this recipe earns a <b>pretty good spoonacular score of 79%</b>. If you like this recipe, take a look at these similar recipes: <a href=\"https://spoonacular.com/recipes/wasabi-honey-glazed-salmon-1435575\">Wasabi & Honey Glazed-Salmon</a>, <a href=\"https://spoonacular.com/recipes/wasabi-honey-glazed-salmon-1395909\">Wasabi & Honey Glazed-Salmon</a>, and <a href=\"https://spoonacular.com/recipes/wasabi-honey-glazed-salmon-1501685\">Wasabi & Honey Glazed-Salmon</a>.",
+      "sustainable": false,
+      "title": "Glasierter Lachs mit Wasabi und Honig",
+      "title_en": "Wasabi & Honey Glazed-Salmon",
+      "unusedIngredients": [],
+      "usedIngredientCount": 0,
+      "usedIngredients": [],
+      "vegan": false,
+      "vegetarian": false,
+      "veryHealthy": false,
+      "veryPopular": false,
+      "weightWatcherSmartPoints": 9
+    },
+    {
+      "aggregateLikes": 94,
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "equipment": [
+                {
+                  "id": 404645,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/pan.png",
+                  "localizedName": "frying pan",
+                  "name": "frying pan"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 4053,
+                  "image": "olive-oil.jpg",
+                  "localizedName": "olive oil",
+                  "name": "olive oil"
+                }
+              ],
+              "number": 1,
+              "step": "In a large pan with lid heat olive oil over medium high heat."
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 11282,
+                  "image": "brown-onion.png",
+                  "localizedName": "onion",
+                  "name": "onion"
+                }
+              ],
+              "length": {
+                "number": 1,
+                "unit": "minutes"
+              },
+              "number": 2,
+              "step": "Add onions and cook for 1 minute."
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 11215,
+                  "image": "garlic.png",
+                  "localizedName": "garlic",
+                  "name": "garlic"
+                },
+                {
+                  "id": 11282,
+                  "image": "brown-onion.png",
+                  "localizedName": "onion",
+                  "name": "onion"
+                }
+              ],
+              "number": 3,
+              "step": "Add garlic and cook until onions are translucent and garlic is fragrant."
+            },
+            {
+              "equipment": [
+                {
+                  "id": 404645,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/pan.png",
+                  "localizedName": "frying pan",
+                  "name": "frying pan"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 1102047,
+                  "image": "salt-and-pepper.jpg",
+                  "localizedName": "salt and pepper",
+                  "name": "salt and pepper"
+                },
+                {
+                  "id": 98840,
+                  "image": "broccolini.jpg",
+                  "localizedName": "broccolini",
+                  "name": "broccolini"
+                },
+                {
+                  "id": 20035,
+                  "image": "uncooked-quinoa.png",
+                  "localizedName": "quinoa",
+                  "name": "quinoa"
+                },
+                {
+                  "id": 1006615,
+                  "image": "chicken-broth.png",
+                  "localizedName": "broth",
+                  "name": "broth"
+                }
+              ],
+              "length": {
+                "number": 18,
+                "unit": "minutes"
+              },
+              "number": 4,
+              "step": "Add quinoa to pan, stir to combine. Slowly add in broth and bring to a boil.Cover and reduce heat to low, cook for 15 minutes.In the last 2-3 minutes of cooking add in broccolini on top of the quinoa (do not stir) and cover.Uncover and toss broccolini and quinoa together.Season to taste with salt and pepper."
+            },
+            {
+              "equipment": [],
+              "ingredients": [
+                {
+                  "id": 12155,
+                  "image": "https://spoonacular.com/cdn/ingredients_100x100/walnuts.jpg",
+                  "localizedName": "walnuts",
+                  "name": "walnuts"
+                }
+              ],
+              "number": 5,
+              "step": "Add walnuts and serve hot."
+            }
+          ]
+        }
+      ],
+      "cheap": false,
+      "cookingMinutes": null,
+      "creditsText": "pickfreshfoods.com",
+      "cuisines": [
+        "Mediterranean",
+        "Italian",
+        "European"
+      ],
+      "dairyFree": true,
+      "date": "17.04.2026",
+      "day_index": 4,
+      "day_name": "Freitag",
+      "diet_type": "vegan",
+      "diets": [
+        "gluten free",
+        "dairy free",
+        "lacto ovo vegetarian",
+        "vegan"
+      ],
+      "dishTypes": [
+        "side dish",
+        "lunch",
+        "main course",
+        "main dish",
+        "dinner"
+      ],
+      "extendedIngredients": [
+        {
+          "aisle": "Produce",
+          "amount": 1,
+          "consistency": "SOLID",
+          "id": 98840,
+          "image": "broccolini.jpg",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "bunch",
+              "unitShort": "bunch"
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "bunch",
+              "unitShort": "bunch"
+            }
+          },
+          "meta": [
+            "trimmed"
+          ],
+          "name": "broccolini",
+          "nameClean": "broccolini",
+          "original": "1 bunch broccolini, trimmed",
+          "originalName": "broccolini, trimmed",
+          "unit": "bunch"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 1,
+          "consistency": "SOLID",
+          "id": 10211215,
+          "image": "garlic.jpg",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "",
+              "unitShort": ""
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "",
+              "unitShort": ""
+            }
+          },
+          "meta": [
+            "minced"
+          ],
+          "name": "garlic clove",
+          "nameClean": "garlic clove",
+          "original": "1 garlic clove, minced",
+          "originalName": "garlic clove, minced",
+          "unit": ""
+        },
+        {
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "amount": 1,
+          "consistency": "LIQUID",
+          "id": 4053,
+          "image": "olive-oil.jpg",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "Tbsp",
+              "unitShort": "Tbsp"
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "Tbsp",
+              "unitShort": "Tbsp"
+            }
+          },
+          "meta": [],
+          "name": "olive oil",
+          "nameClean": "olive oil",
+          "original": "1 tbsp olive oil",
+          "originalName": "olive oil",
+          "unit": "tbsp"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 0.5,
+          "consistency": "SOLID",
+          "id": 11282,
+          "image": "brown-onion.png",
+          "measures": {
+            "metric": {
+              "amount": 80,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 0.5,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [],
+          "name": "onion",
+          "nameClean": "onion",
+          "original": "½ cup onion",
+          "originalName": "onion",
+          "unit": "cup"
+        },
+        {
+          "aisle": "Pasta and Rice",
+          "amount": 1,
+          "consistency": "SOLID",
+          "id": 20035,
+          "image": "uncooked-quinoa.png",
+          "measures": {
+            "metric": {
+              "amount": 170,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "cup",
+              "unitShort": "cup"
+            }
+          },
+          "meta": [
+            "rinsed"
+          ],
+          "name": "quinoa",
+          "nameClean": "quinoa",
+          "original": "1 cup quinoa, rinsed",
+          "originalName": "quinoa, rinsed",
+          "unit": "cup"
+        },
+        {
+          "aisle": "Canned and Jarred",
+          "amount": 2,
+          "consistency": "LIQUID",
+          "id": 6615,
+          "image": "chicken-broth.png",
+          "measures": {
+            "metric": {
+              "amount": 470,
+              "unitLong": "milliliters",
+              "unitShort": "ml"
+            },
+            "us": {
+              "amount": 2,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [],
+          "name": "vegetable broth",
+          "nameClean": "vegetable broth",
+          "original": "2 cups vegetable broth",
+          "originalName": "vegetable broth",
+          "unit": "cups"
+        },
+        {
+          "aisle": "Nuts",
+          "amount": 2,
+          "consistency": "SOLID",
+          "id": 10112155,
+          "image": "walnuts.jpg",
+          "measures": {
+            "metric": {
+              "amount": 56.699,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 2,
+              "unitLong": "ounces",
+              "unitShort": "oz"
+            }
+          },
+          "meta": [
+            "chopped"
+          ],
+          "name": "walnuts",
+          "nameClean": "walnuts",
+          "original": "2 oz chopped walnuts",
+          "originalName": "chopped walnuts",
+          "unit": "oz"
+        }
+      ],
+      "gaps": "no",
+      "glutenFree": true,
+      "healthScore": 74,
+      "id": 715769,
+      "image": "https://img.spoonacular.com/recipes/715769-312x231.jpg",
+      "imageType": "jpg",
+      "ingredients": [
+        "1 Bund Broccolini, geputzt",
+        "1 Knoblauchzehe, gehackt",
+        "1 EL Olivenöl",
+        "½ Tasse Zwiebel",
+        "1 Tasse Quinoa, abgespült",
+        "2 Tassen Gemüsebrühe",
+        "2 Unzen gehackte Walnüsse"
+      ],
+      "ingredients_en": [
+        "1 bunch broccolini, trimmed",
+        "1 garlic clove, minced",
+        "1 tbsp olive oil",
+        "½ cup onion",
+        "1 cup quinoa, rinsed",
+        "2 cups vegetable broth",
+        "2 oz chopped walnuts"
+      ],
+      "instructions_en": "1. In a large pan with lid heat olive oil over medium high heat.\n2. Add onions and cook for 1 minute.\n3. Add garlic and cook until onions are translucent and garlic is fragrant.\n4. Add quinoa to pan, stir to combine. Slowly add in broth and bring to a boil.Cover and reduce heat to low, cook for 15 minutes.In the last 2-3 minutes of cooking add in broccolini on top of the quinoa (do not stir) and cover.Uncover and toss broccolini and quinoa together.Season to taste with salt and pepper.\n5. Add walnuts and serve hot.",
+      "instructions_text": "1. In einer großen Pfanne mit Deckel Olivenöl bei mittlerer Hitze erhitzen.\n2. Zwiebeln hinzufügen und 1 Minute kochen lassen.\n3. Knoblauch hinzufügen und kochen, bis die Zwiebeln durchscheinend sind und der Knoblauch duftet.\n4. Quinoa in die Pfanne geben und umrühren. Langsam Brühe hinzufügen und zum Kochen bringen. Abdecken, Hitze auf niedrige Stufe reduzieren und 15 Minuten kochen lassen. In den letzten 2–3 Minuten des Garvorgangs Broccolini auf den Quinoa geben (nicht umrühren) und abdecken. Broccolini und Quinoa aufdecken und vermischen. Mit Salz und Pfeffer abschmecken.\n5. Walnüsse hinzufügen und heiß servieren.",
+      "language": "en",
+      "license": null,
+      "likes": 0,
+      "lowFodmap": false,
+      "missedIngredientCount": 6,
+      "missedIngredients": [
+        {
+          "aisle": "Produce",
+          "amount": 1,
+          "extendedName": "trimmed broccolini",
+          "id": 98840,
+          "image": "https://img.spoonacular.com/ingredients_100x100/broccolini.jpg",
+          "meta": [
+            "trimmed"
+          ],
+          "name": "broccolini",
+          "original": "1 bunch broccolini, trimmed",
+          "originalName": "broccolini, trimmed",
+          "unit": "bunch",
+          "unitLong": "bunch",
+          "unitShort": "bunch"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 1,
+          "id": 10211215,
+          "image": "https://img.spoonacular.com/ingredients_100x100/garlic.jpg",
+          "meta": [
+            "minced"
+          ],
+          "name": "garlic clove",
+          "original": "1 garlic clove, minced",
+          "originalName": "garlic clove, minced",
+          "unit": "",
+          "unitLong": "",
+          "unitShort": ""
+        },
+        {
+          "aisle": "Produce",
+          "amount": 0.5,
+          "id": 11282,
+          "image": "https://img.spoonacular.com/ingredients_100x100/brown-onion.png",
+          "meta": [],
+          "name": "onion",
+          "original": "½ cup onion",
+          "originalName": "onion",
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Pasta and Rice",
+          "amount": 1,
+          "id": 20035,
+          "image": "https://img.spoonacular.com/ingredients_100x100/uncooked-quinoa.png",
+          "meta": [
+            "rinsed"
+          ],
+          "name": "quinoa",
+          "original": "1 cup quinoa, rinsed",
+          "originalName": "quinoa, rinsed",
+          "unit": "cup",
+          "unitLong": "cup",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Canned and Jarred",
+          "amount": 2,
+          "id": 6615,
+          "image": "https://img.spoonacular.com/ingredients_100x100/chicken-broth.png",
+          "meta": [],
+          "name": "vegetable broth",
+          "original": "2 cups vegetable broth",
+          "originalName": "vegetable broth",
+          "unit": "cups",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Nuts",
+          "amount": 2,
+          "id": 10112155,
+          "image": "https://img.spoonacular.com/ingredients_100x100/walnuts.jpg",
+          "meta": [
+            "chopped"
+          ],
+          "name": "walnuts",
+          "original": "2 oz chopped walnuts",
+          "originalName": "chopped walnuts",
+          "unit": "oz",
+          "unitLong": "ounces",
+          "unitShort": "oz"
+        }
+      ],
+      "occasions": [],
+      "preparationMinutes": null,
+      "pricePerServing": 414.24,
+      "readyInMinutes": 30,
+      "servings": 2,
+      "source": "api",
+      "sourceName": "pickfreshfoods.com",
+      "sourceUrl": "https://pickfreshfoods.com/broccolini-quinoa-pilaf/",
+      "spoonacularScore": 98.10364532470703,
+      "spoonacularSourceUrl": "https://spoonacular.com/broccolini-quinoa-pilaf-715769",
+      "summary": "Broccolini Quinoa Pilaf requires approximately <b>30 minutes</b> from start to finish. For <b>$4.14 per serving</b>, you get a main course that serves 2. One portion of this dish contains around <b>20g of protein</b>, <b>31g of fat</b>, and a total of <b>625 calories</b>. Head to the store and pick up vegetable broth, onion, olive oil, and a few other things to make it today. A few people made this recipe, and 94 would say it hit the spot. It is a <b>rather expensive</b> recipe for fans of Mediterranean food. It is a good option if you're following a <b>gluten free, dairy free, lacto ovo vegetarian, and vegan</b> diet. It is brought to you by Pick Fresh Foods. With a spoonacular <b>score of 98%</b>, this dish is excellent. Similar recipes are <a href=\"https://spoonacular.com/recipes/spring-broccolini-kale-quinoa-bowls-734866\">Spring Broccolini & Kale Quinoa Bowls</a>, <a href=\"https://spoonacular.com/recipes/orange-sesame-salmon-with-quinoa-broccolini-839832\">Orange-Sesame Salmon with Quinoa & Broccolini</a>, and <a href=\"https://spoonacular.com/recipes/black-pepper-goat-cheese-and-chard-quinoa-with-roasted-broccolini-625829\">Black Pepper Goat Cheese and Chard Quinoa with Roasted Broccolini</a>.",
+      "sustainable": false,
+      "title": "Broccolini-Quinoa-Pilaw",
+      "title_en": "Broccolini Quinoa Pilaf",
+      "unusedIngredients": [],
+      "usedIngredientCount": 0,
+      "usedIngredients": [],
+      "vegan": true,
+      "vegetarian": true,
+      "veryHealthy": true,
+      "veryPopular": false,
+      "weightWatcherSmartPoints": 17
+    },
+    {
+      "aggregateLikes": 34,
+      "analyzedInstructions": [
+        {
+          "name": "",
+          "steps": [
+            {
+              "equipment": [
+                {
+                  "id": 404669,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/sauce-pan.jpg",
+                  "localizedName": "sauce pan",
+                  "name": "sauce pan"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 11955,
+                  "image": "sundried-tomatoes.jpg",
+                  "localizedName": "sun dried tomatoes",
+                  "name": "sun dried tomatoes"
+                },
+                {
+                  "id": 16057,
+                  "image": "chickpeas.png",
+                  "localizedName": "chickpeas",
+                  "name": "chickpeas"
+                },
+                {
+                  "id": 20035,
+                  "image": "uncooked-quinoa.png",
+                  "localizedName": "quinoa",
+                  "name": "quinoa"
+                },
+                {
+                  "id": 14412,
+                  "image": "water.png",
+                  "localizedName": "water",
+                  "name": "water"
+                }
+              ],
+              "length": {
+                "number": 1065,
+                "unit": "minutes"
+              },
+              "number": 1,
+              "step": "Rinse the quinoa and soak for 8 hours or overnight in 2 cups of water. Rinse the chickpeas and soak for 8 hours or overnight in several inches of water.Rinse the chickpeas and transfer to a small saucepan. Cover with fresh water and bring to a boil. Reduce heat to medium-low, cover, and simmer for 1 hour or until buttery soft.While the chickpeas are cooking, soak the sun-dried tomatoes in hot water for 30 minutes, then drain and chop. Meanwhile, bring the quinoa to a boil in a medium saucepan. Reduce heat to the lowest setting, cover, and simmer for 15 minutes or until the water is absorbed."
+            },
+            {
+              "equipment": [
+                {
+                  "id": 404669,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/sauce-pan.jpg",
+                  "localizedName": "sauce pan",
+                  "name": "sauce pan"
+                },
+                {
+                  "id": 404645,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/pan.png",
+                  "localizedName": "frying pan",
+                  "name": "frying pan"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 12087,
+                  "image": "cashews.jpg",
+                  "localizedName": "cashews",
+                  "name": "cashews"
+                },
+                {
+                  "id": 0,
+                  "image": "white-bread.jpg",
+                  "localizedName": "sandwich bread",
+                  "name": "sandwich bread"
+                }
+              ],
+              "length": {
+                "number": 15,
+                "unit": "minutes"
+              },
+              "number": 2,
+              "step": "Remove from heat and wait 5 minutes before fluffing with a fork.Meanwhile, toast the cashews in a dry unoiled skillet or saucepan over medium-low heat, tossing or stirring frequently, for 10 minutes until browned."
+            },
+            {
+              "equipment": [
+                {
+                  "id": 405907,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/mixing-bowl.jpg",
+                  "localizedName": "mixing bowl",
+                  "name": "mixing bowl"
+                }
+              ],
+              "ingredients": [
+                {
+                  "id": 11955,
+                  "image": "sundried-tomatoes.jpg",
+                  "localizedName": "sun dried tomatoes",
+                  "name": "sun dried tomatoes"
+                },
+                {
+                  "id": 93822,
+                  "image": "cherries-dried.jpg",
+                  "localizedName": "dried cherries",
+                  "name": "dried cherries"
+                },
+                {
+                  "id": 16057,
+                  "image": "chickpeas.png",
+                  "localizedName": "chickpeas",
+                  "name": "chickpeas"
+                },
+                {
+                  "id": 12087,
+                  "image": "cashews.jpg",
+                  "localizedName": "cashews",
+                  "name": "cashews"
+                },
+                {
+                  "id": 20035,
+                  "image": "uncooked-quinoa.png",
+                  "localizedName": "quinoa",
+                  "name": "quinoa"
+                }
+              ],
+              "number": 3,
+              "step": "Transfer the chickpeas, quinoa, sun-dried tomatoes, cashews and dried cherries to a large mixing bowl."
+            },
+            {
+              "equipment": [
+                {
+                  "id": 404661,
+                  "image": "https://spoonacular.com/cdn/equipment_100x100/whisk.png",
+                  "localizedName": "whisk",
+                  "name": "whisk"
+                }
+              ],
+              "ingredients": [],
+              "number": 4,
+              "step": "Whisk the dressing ingredients together and pour over the salad. Stir to combine and serve at room temperature or chilled."
+            }
+          ]
+        }
+      ],
+      "cheap": false,
+      "cookingMinutes": null,
+      "creditsText": "foodandspice.com",
+      "cuisines": [],
+      "dairyFree": true,
+      "date": "18.04.2026",
+      "day_index": 5,
+      "day_name": "Samstag",
+      "diet_type": "vegetarian",
+      "diets": [
+        "gluten free",
+        "dairy free",
+        "lacto ovo vegetarian"
+      ],
+      "dishTypes": [
+        "lunch",
+        "main course",
+        "main dish",
+        "dinner"
+      ],
+      "extendedIngredients": [
+        {
+          "aisle": "Nuts",
+          "amount": 0.33333334,
+          "consistency": "SOLID",
+          "id": 12087,
+          "image": "cashews.jpg",
+          "measures": {
+            "metric": {
+              "amount": 43,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 0.33333334,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [
+            "raw",
+            "whole",
+            "chopped"
+          ],
+          "name": "cashews",
+          "nameClean": "cashews",
+          "original": "1/3 cup raw cashews, chopped or left whole",
+          "originalName": "raw cashews, chopped or left whole",
+          "unit": "cup"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 0.33333334,
+          "consistency": "SOLID",
+          "id": 93822,
+          "image": "cherries-dried.jpg",
+          "measures": {
+            "metric": {
+              "amount": 40.404,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 0.33333334,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [
+            "dried"
+          ],
+          "name": "dried cherries",
+          "nameClean": "dried cherries",
+          "original": "1/3 cup dried cherries",
+          "originalName": "dried cherries",
+          "unit": "cup"
+        },
+        {
+          "aisle": "Canned and Jarred",
+          "amount": 1.5,
+          "consistency": "SOLID",
+          "id": 16056,
+          "image": "chickpeas.png",
+          "measures": {
+            "metric": {
+              "amount": 300,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 1.5,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [
+            "dried",
+            "cooked"
+          ],
+          "name": "dried chickpeas",
+          "nameClean": "dried chickpeas",
+          "original": "1/2 cup dried chickpeas (1 1/2 cups cooked or 1 14 oz can)",
+          "originalName": "1/2 cup dried chickpeas cooked or 1 14 oz can)",
+          "unit": "cups"
+        },
+        {
+          "aisle": "Spices and Seasonings",
+          "amount": 0.5,
+          "consistency": "SOLID",
+          "id": 2042,
+          "image": "thyme.jpg",
+          "measures": {
+            "metric": {
+              "amount": 0.5,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            },
+            "us": {
+              "amount": 0.5,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            }
+          },
+          "meta": [
+            "dried"
+          ],
+          "name": "dried thyme",
+          "nameClean": "dried thyme",
+          "original": "1/2 teaspoon dried thyme",
+          "originalName": "dried thyme",
+          "unit": "teaspoon"
+        },
+        {
+          "aisle": "Spices and Seasonings",
+          "amount": 0.5,
+          "consistency": "SOLID",
+          "id": 1002014,
+          "image": "ground-cumin.jpg",
+          "measures": {
+            "metric": {
+              "amount": 0.5,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            },
+            "us": {
+              "amount": 0.5,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            }
+          },
+          "meta": [],
+          "name": "ground cumin",
+          "nameClean": "ground cumin",
+          "original": "1/2 teaspoon ground cumin",
+          "originalName": "ground cumin",
+          "unit": "teaspoon"
+        },
+        {
+          "aisle": "Nut butters, Jams, and Honey",
+          "amount": 1.5,
+          "consistency": "LIQUID",
+          "id": 19296,
+          "image": "honey.png",
+          "measures": {
+            "metric": {
+              "amount": 1.5,
+              "unitLong": "Tbsps",
+              "unitShort": "Tbsps"
+            },
+            "us": {
+              "amount": 1.5,
+              "unitLong": "Tbsps",
+              "unitShort": "Tbsps"
+            }
+          },
+          "meta": [],
+          "name": "honey",
+          "nameClean": "honey",
+          "original": "1 1/2 tablespoons honey",
+          "originalName": "honey",
+          "unit": "tablespoons"
+        },
+        {
+          "aisle": "Beverages",
+          "amount": 1,
+          "consistency": "LIQUID",
+          "id": 9206,
+          "image": "orange-juice.jpg",
+          "measures": {
+            "metric": {
+              "amount": 1,
+              "unitLong": "",
+              "unitShort": ""
+            },
+            "us": {
+              "amount": 1,
+              "unitLong": "",
+              "unitShort": ""
+            }
+          },
+          "meta": [
+            "juiced"
+          ],
+          "name": "juice of orange",
+          "nameClean": "juice of orange",
+          "original": "1 medium orange, juiced",
+          "originalName": "orange, juiced",
+          "unit": ""
+        },
+        {
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "amount": 2,
+          "consistency": "LIQUID",
+          "id": 4053,
+          "image": "olive-oil.jpg",
+          "measures": {
+            "metric": {
+              "amount": 2,
+              "unitLong": "Tbsps",
+              "unitShort": "Tbsps"
+            },
+            "us": {
+              "amount": 2,
+              "unitLong": "Tbsps",
+              "unitShort": "Tbsps"
+            }
+          },
+          "meta": [],
+          "name": "olive oil",
+          "nameClean": "olive oil",
+          "original": "2 tablespoons olive oil",
+          "originalName": "olive oil",
+          "unit": "tablespoons"
+        },
+        {
+          "aisle": "Pasta and Rice",
+          "amount": 2,
+          "consistency": "SOLID",
+          "id": 20035,
+          "image": "uncooked-quinoa.png",
+          "measures": {
+            "metric": {
+              "amount": 340,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 2,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [
+            "dried",
+            "cooked"
+          ],
+          "name": "quinoa",
+          "nameClean": "quinoa",
+          "original": "1 cup dried quinoa (2 cups cooked)",
+          "originalName": "cup dried quinoa cooked)",
+          "unit": "cups"
+        },
+        {
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "amount": 2,
+          "consistency": "LIQUID",
+          "id": 1022068,
+          "image": "red-wine-vinegar.jpg",
+          "measures": {
+            "metric": {
+              "amount": 2,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            },
+            "us": {
+              "amount": 2,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            }
+          },
+          "meta": [
+            "red"
+          ],
+          "name": "red wine vinegar",
+          "nameClean": "red wine vinegar",
+          "original": "2 teaspoons red wine vinegar",
+          "originalName": "red wine vinegar",
+          "unit": "teaspoons"
+        },
+        {
+          "aisle": "Spices and Seasonings",
+          "amount": 6,
+          "consistency": "SOLID",
+          "id": 1012047,
+          "image": "salt.jpg",
+          "measures": {
+            "metric": {
+              "amount": 6,
+              "unitLong": "servings",
+              "unitShort": "servings"
+            },
+            "us": {
+              "amount": 6,
+              "unitLong": "servings",
+              "unitShort": "servings"
+            }
+          },
+          "meta": [
+            "fresh",
+            "black",
+            "to taste"
+          ],
+          "name": "sea-salt",
+          "nameClean": "sea-salt",
+          "original": "sea salt and fresh cracked black pepper to taste",
+          "originalName": "sea salt and fresh cracked black pepper to taste",
+          "unit": "servings"
+        },
+        {
+          "aisle": "Canned and Jarred",
+          "amount": 0.5,
+          "consistency": "SOLID",
+          "id": 11955,
+          "image": "sundried-tomatoes.jpg",
+          "measures": {
+            "metric": {
+              "amount": 55,
+              "unitLong": "grams",
+              "unitShort": "g"
+            },
+            "us": {
+              "amount": 0.5,
+              "unitLong": "cups",
+              "unitShort": "cups"
+            }
+          },
+          "meta": [],
+          "name": "sun-dried tomatoes",
+          "nameClean": "sun-dried tomatoes",
+          "original": "1/2 cup sun-dried tomatoes",
+          "originalName": "sun-dried tomatoes",
+          "unit": "cup"
+        },
+        {
+          "aisle": "Spices and Seasonings",
+          "amount": 0.5,
+          "consistency": "SOLID",
+          "id": 2043,
+          "image": "turmeric.jpg",
+          "measures": {
+            "metric": {
+              "amount": 0.5,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            },
+            "us": {
+              "amount": 0.5,
+              "unitLong": "teaspoons",
+              "unitShort": "tsps"
+            }
+          },
+          "meta": [],
+          "name": "turmeric",
+          "nameClean": "turmeric",
+          "original": "1/2 teaspoon turmeric",
+          "originalName": "turmeric",
+          "unit": "teaspoon"
+        }
+      ],
+      "gaps": "no",
+      "glutenFree": true,
+      "healthScore": 100,
+      "id": 716004,
+      "image": "https://img.spoonacular.com/recipes/716004-312x231.jpg",
+      "imageType": "jpg",
+      "ingredients": [
+        "1/3 Tasse rohe Cashewnüsse, gehackt oder ganz belassen",
+        "1/3 Tasse getrocknete Kirschen",
+        "1/2 Tasse getrocknete Kichererbsen (1 1/2 Tassen gekocht oder 1 14-Unzen-Dose)",
+        "1/2 Teelöffel getrockneter Thymian",
+        "1/2 Teelöffel gemahlener Kreuzkümmel",
+        "1 1/2 Esslöffel Honig",
+        "1 mittelgroße Orange, entsaftet",
+        "2 Esslöffel Olivenöl",
+        "1 Tasse getrocknete Quinoa (2 Tassen gekocht)",
+        "2 Teelöffel Rotweinessig",
+        "Meersalz und frisch gemahlener schwarzer Pfeffer nach Geschmack",
+        "1/2 Tasse sonnengetrocknete Tomaten",
+        "1/2 Teelöffel Kurkuma"
+      ],
+      "ingredients_en": [
+        "1/3 cup raw cashews, chopped or left whole",
+        "1/3 cup dried cherries",
+        "1/2 cup dried chickpeas (1 1/2 cups cooked or 1 14 oz can)",
+        "1/2 teaspoon dried thyme",
+        "1/2 teaspoon ground cumin",
+        "1 1/2 tablespoons honey",
+        "1 medium orange, juiced",
+        "2 tablespoons olive oil",
+        "1 cup dried quinoa (2 cups cooked)",
+        "2 teaspoons red wine vinegar",
+        "sea salt and fresh cracked black pepper to taste",
+        "1/2 cup sun-dried tomatoes",
+        "1/2 teaspoon turmeric"
+      ],
+      "instructions_en": "1. Rinse the quinoa and soak for 8 hours or overnight in 2 cups of water. Rinse the chickpeas and soak for 8 hours or overnight in several inches of water.Rinse the chickpeas and transfer to a small saucepan. Cover with fresh water and bring to a boil. Reduce heat to medium-low, cover, and simmer for 1 hour or until buttery soft.While the chickpeas are cooking, soak the sun-dried tomatoes in hot water for 30 minutes, then drain and chop. Meanwhile, bring the quinoa to a boil in a medium saucepan. Reduce heat to the lowest setting, cover, and simmer for 15 minutes or until the water is absorbed.\n2. Remove from heat and wait 5 minutes before fluffing with a fork.Meanwhile, toast the cashews in a dry unoiled skillet or saucepan over medium-low heat, tossing or stirring frequently, for 10 minutes until browned.\n3. Transfer the chickpeas, quinoa, sun-dried tomatoes, cashews and dried cherries to a large mixing bowl.\n4. Whisk the dressing ingredients together and pour over the salad. Stir to combine and serve at room temperature or chilled.",
+      "instructions_text": "1. Quinoa abspülen und 8 Stunden oder über Nacht in 2 Tassen Wasser einweichen. Die Kichererbsen abspülen und 8 Stunden oder über Nacht in mehreren Zentimetern Wasser einweichen. Die Kichererbsen abspülen und in einen kleinen Topf geben. Mit frischem Wasser bedecken und zum Kochen bringen. Reduzieren Sie die Hitze auf mittlere bis niedrige Stufe, decken Sie sie ab und lassen Sie sie 1 Stunde lang köcheln, bis sie butterweich sind. Während die Kichererbsen kochen, legen Sie die sonnengetrockneten Tomaten 30 Minuten lang in heißes Wasser, lassen Sie sie dann abtropfen und hacken Sie sie. In der Zwischenzeit die Quinoa in einem mittelgroßen Topf zum Kochen bringen. Reduzieren Sie die Hitze auf die niedrigste Stufe, decken Sie das Ganze ab und lassen Sie es 15 Minuten lang köcheln, bis das Wasser aufgesogen ist.\n2. Vom Herd nehmen und 5 Minuten warten, bevor Sie sie mit einer Gabel auflockern. In der Zwischenzeit die Cashewnüsse in einer trockenen, ungeölten Pfanne oder einem Topf bei mittlerer bis niedriger Hitze unter häufigem Wenden oder Rühren 10 Minuten lang rösten, bis sie braun sind.\n3. Kichererbsen, Quinoa, sonnengetrocknete Tomaten, Cashewnüsse und getrocknete Kirschen in eine große Rührschüssel geben.\n4. Die Zutaten für das Dressing verquirlen und über den Salat gießen. Umrühren und bei Zimmertemperatur oder gekühlt servieren.",
+      "language": "en",
+      "license": null,
+      "likes": 0,
+      "lowFodmap": false,
+      "missedIngredientCount": 11,
+      "missedIngredients": [
+        {
+          "aisle": "Nuts",
+          "amount": 0.33333334,
+          "extendedName": "raw whole raw cashews",
+          "id": 12087,
+          "image": "https://img.spoonacular.com/ingredients_100x100/cashews.jpg",
+          "meta": [
+            "raw",
+            "whole",
+            "chopped"
+          ],
+          "name": "cashews",
+          "original": "1/3 cup raw cashews, chopped or left whole",
+          "originalName": "raw cashews, chopped or left whole",
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Produce",
+          "amount": 0.33333334,
+          "id": 93822,
+          "image": "https://img.spoonacular.com/ingredients_100x100/cherries-dried.jpg",
+          "meta": [
+            "dried"
+          ],
+          "name": "dried cherries",
+          "original": "1/3 cup dried cherries",
+          "originalName": "dried cherries",
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Canned and Jarred",
+          "amount": 1.5,
+          "extendedName": "cooked dried chickpeas",
+          "id": 16056,
+          "image": "https://img.spoonacular.com/ingredients_100x100/chickpeas.png",
+          "meta": [
+            "dried",
+            "cooked"
+          ],
+          "name": "dried chickpeas",
+          "original": "1/2 cup dried chickpeas (1 1/2 cups cooked or 1 14 oz can)",
+          "originalName": "1/2 cup dried chickpeas cooked or 1 14 oz can)",
+          "unit": "cups",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Spices and Seasonings",
+          "amount": 0.5,
+          "id": 2042,
+          "image": "https://img.spoonacular.com/ingredients_100x100/thyme.jpg",
+          "meta": [
+            "dried"
+          ],
+          "name": "dried thyme",
+          "original": "1/2 teaspoon dried thyme",
+          "originalName": "dried thyme",
+          "unit": "teaspoon",
+          "unitLong": "teaspoons",
+          "unitShort": "tsp"
+        },
+        {
+          "aisle": "Spices and Seasonings",
+          "amount": 0.5,
+          "id": 1002014,
+          "image": "https://img.spoonacular.com/ingredients_100x100/ground-cumin.jpg",
+          "meta": [],
+          "name": "ground cumin",
+          "original": "1/2 teaspoon ground cumin",
+          "originalName": "ground cumin",
+          "unit": "teaspoon",
+          "unitLong": "teaspoons",
+          "unitShort": "tsp"
+        },
+        {
+          "aisle": "Nut butters, Jams, and Honey",
+          "amount": 1.5,
+          "id": 19296,
+          "image": "https://img.spoonacular.com/ingredients_100x100/honey.png",
+          "meta": [],
+          "name": "honey",
+          "original": "1 1/2 tablespoons honey",
+          "originalName": "honey",
+          "unit": "tablespoons",
+          "unitLong": "tablespoons",
+          "unitShort": "Tbsp"
+        },
+        {
+          "aisle": "Beverages",
+          "amount": 1,
+          "extendedName": "orange (juice)",
+          "id": 9206,
+          "image": "https://img.spoonacular.com/ingredients_100x100/orange-juice.jpg",
+          "meta": [
+            "juiced"
+          ],
+          "name": "juice of orange",
+          "original": "1 medium orange, juiced",
+          "originalName": "orange, juiced",
+          "unit": "",
+          "unitLong": "",
+          "unitShort": ""
+        },
+        {
+          "aisle": "Pasta and Rice",
+          "amount": 2,
+          "extendedName": "cooked dried quinoa",
+          "id": 20035,
+          "image": "https://img.spoonacular.com/ingredients_100x100/uncooked-quinoa.png",
+          "meta": [
+            "dried",
+            "cooked"
+          ],
+          "name": "quinoa",
+          "original": "1 cup dried quinoa (2 cups cooked)",
+          "originalName": "cup dried quinoa cooked)",
+          "unit": "cups",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Oil, Vinegar, Salad Dressing",
+          "amount": 2,
+          "id": 1022068,
+          "image": "https://img.spoonacular.com/ingredients_100x100/red-wine-vinegar.jpg",
+          "meta": [
+            "red"
+          ],
+          "name": "red wine vinegar",
+          "original": "2 teaspoons red wine vinegar",
+          "originalName": "red wine vinegar",
+          "unit": "teaspoons",
+          "unitLong": "teaspoons",
+          "unitShort": "tsp"
+        },
+        {
+          "aisle": "Canned and Jarred",
+          "amount": 0.5,
+          "id": 11955,
+          "image": "https://img.spoonacular.com/ingredients_100x100/sundried-tomatoes.jpg",
+          "meta": [],
+          "name": "sun-dried tomatoes",
+          "original": "1/2 cup sun-dried tomatoes",
+          "originalName": "sun-dried tomatoes",
+          "unit": "cup",
+          "unitLong": "cups",
+          "unitShort": "cup"
+        },
+        {
+          "aisle": "Spices and Seasonings",
+          "amount": 0.5,
+          "id": 2043,
+          "image": "https://img.spoonacular.com/ingredients_100x100/turmeric.jpg",
+          "meta": [],
+          "name": "turmeric",
+          "original": "1/2 teaspoon turmeric",
+          "originalName": "turmeric",
+          "unit": "teaspoon",
+          "unitLong": "teaspoons",
+          "unitShort": "tsp"
+        }
+      ],
+      "occasions": [],
+      "preparationMinutes": null,
+      "pricePerServing": 186.91,
+      "readyInMinutes": 45,
+      "servings": 6,
+      "source": "api",
+      "sourceName": "foodandspice.com",
+      "sourceUrl": "https://www.foodandspice.com/2016/01/quinoa-and-chickpea-salad-with-sun.html",
+      "spoonacularScore": 98.63646697998047,
+      "spoonacularSourceUrl": "https://spoonacular.com/quinoa-and-chickpea-salad-with-sun-dried-tomatoes-and-dried-cherries-716004",
+      "summary": "Need a <b>gluten free, dairy free, and vegetarian side dish</b>? Quinoan and Chickpea Salad with Sun-Dried Tomatoes and Dried Cherries could be an awesome recipe to try. This recipe serves 6 and costs $1.87 per serving. One serving contains <b>539 calories</b>, <b>21g of protein</b>, and <b>15g of fat</b>. 34 people have made this recipe and would make it again. Head to the store and pick up honey, juice of orange, chickpeas, and a few other things to make it today. From preparation to the plate, this recipe takes about <b>45 minutes</b>. It is brought to you by foodandspice.blogspot.com. Taking all factors into account, this recipe <b>earns a spoonacular score of 99%</b>, which is spectacular. <a href=\"https://spoonacular.com/recipes/chickpea-and-cucumber-salad-with-dried-cherries-and-cheese-506468\">Chickpean and Cucumber Salad with Dried Cherries and Cheese</a>, <a href=\"https://spoonacular.com/recipes/spinach-quiche-with-sun-dried-tomatoes-923350\">Spinach Quiche with Sun-Dried Tomatoes</a>, and <a href=\"https://spoonacular.com/recipes/quinoa-salad-with-dried-tart-cherries-mint-and-feta-in-lemon-sumac-vinaigrette-605087\">Quinoa Salad With Dried Tart Cherries, Mint, and Fetan in Lemon-Sumac Vinaigrette</a> are very similar to this recipe.",
+      "sustainable": false,
+      "title": "Quinoa-Kichererbsen-Salat mit sonnengetrockneten Tomaten und getrockneten Kirschen",
+      "title_en": "Quinoa and Chickpea Salad with Sun-Dried Tomatoes and Dried Cherries",
+      "unusedIngredients": [],
+      "usedIngredientCount": 0,
+      "usedIngredients": [],
+      "vegan": false,
+      "vegetarian": true,
+      "veryHealthy": true,
+      "veryPopular": false,
+      "weightWatcherSmartPoints": 14
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "19.04.2026",
+      "day_index": 6,
+      "day_name": "Sonntag",
+      "diet_type": "vegan",
+      "extendedIngredients": [],
+      "id": "fixed_gemüseeintopf",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 40,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Gemüseeintopf"
+    }
+  ]
+}

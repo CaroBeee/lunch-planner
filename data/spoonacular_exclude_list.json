@@ -1,0 +1,76 @@
+{
+  "project": "Lunch Planner",
+  "provider": "spoonacular",
+  "description": "Exclude list for recipe search - to be used with /recipes/complexSearch endpoint",
+  "last_updated": "2026-03-20",
+  "exclude_rules": {
+    "excludeIngredients": [
+      "paprika",
+"curry",
+"cilantro",
+"coriander",
+"olives",
+"anchovies",
+"oysters",
+"liver",
+"kimchi",
+"pepper"
+    ],
+    "excludeCuisine": [
+      "asian",
+      "chinese",
+      "japanese",
+      "thai",
+      "vietnamese",
+      "korean",
+      "middle eastern"
+    ],
+    "excludeTags": [
+      "spicy",
+      "curry",
+      "hot",
+      "chili",
+      "sweet",
+      "dessert",
+      "pancake",
+      "crepe"
+    ],
+    "excludeDishTypes": [
+      "soup",
+      "stew",
+      "dessert",
+      "sweet",
+      "breakfast",
+      "brunch"
+    ],
+    "excludeTitles": [
+      "kaiserschmarrn",
+      "milchreis",
+      "pancake",
+      "crepe",
+      "pfannkuchen",
+      "obstsalat",
+      "fruit salad",
+      "smoothie bowl",
+      "french toast"
+    ]
+  },
+  "usage_example": {
+    "endpoint": "GET /recipes/complexSearch",
+    "params": {
+      "excludeIngredients": "paprika",
+      "excludeCuisine": "asian,chinese,japanese,thai,vietnamese,korean,middle eastern",
+      "tags": "NOT spicy, NOT curry",
+      "note_dishType": "Filter results where dishTypes does NOT contain 'soup', 'stew', 'dessert', 'breakfast'"
+    }
+  },
+  "notes": {
+    "paprika": "Excluded as raw ingredient via excludeIngredients parameter",
+    "scharfes Gericht": "Mapped to excludeTags: spicy, hot, chili - Spoonacular has no direct 'spicy dish' parameter",
+    "Curry": "Mapped to excludeTags: curry - covers curry-based dishes and sauces",
+    "Orientalisch": "Mapped to excludeCuisine: middle eastern - closest Spoonacular cuisine match",
+    "Asiatisch": "Mapped to excludeCuisine: asian, chinese, japanese, thai, vietnamese, korean",
+    "Suppen-Gerichte": "Mapped to excludeDishTypes: soup, stew - post-filter results where dishTypes contains 'soup' or 'stew'",
+    "Süße Hauptspeisen": "Mapped to excludeTags: sweet, dessert, pancake + excludeDishTypes: dessert, breakfast + excludeTitles post-filter"
+  }
+}

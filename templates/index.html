@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mittagsplaner für 7 Tage</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Toast container -->
+    <div id="toast-container"></div>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner-wrap">
+            <div class="spinner"></div>
+            <p class="spinner-text">Wird geladen…</p>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1>🍽️ Mittagsplaner für 7 Tage</h1>
+            <p class="date-range" id="date-range"></p>
+            <div class="diet-overview" id="diet-overview"></div>
+        </div>
+    </header>
+
+    <!-- ===== NAV TOOLBAR ===== -->
+    <nav class="toolbar">
+        <button class="btn btn-primary" id="btn-generate" title="Neuen Plan erstellen">
+            <span class="btn-icon">🔄</span> <span class="btn-text">Neuer Plan</span>
+        </button>
+        <button class="btn btn-secondary" id="btn-load-plans" title="Gespeicherte Pläne laden">
+            <span class="btn-icon">📂</span> <span class="btn-text">Ältere Pläne</span>
+        </button>
+        <button class="btn btn-secondary" id="btn-save-plan" title="Aktuellen Plan speichern">
+            <span class="btn-icon">💾</span> <span class="btn-text">Plan speichern</span>
+        </button>
+        <button class="btn btn-secondary" id="btn-settings" title="Einstellungen & Exclude-List">
+            <span class="btn-icon">⚙️</span> <span class="btn-text">Einstellungen</span>
+        </button>
+        <button class="btn btn-accent" id="btn-refresh-api" title="API-Rezepte aktualisieren">
+            <span class="btn-icon">☁️</span> <span class="btn-text">API aktualisieren</span>
+        </button>
+    </nav>
+
+    <!-- ===== PLAN GRID ===== -->
+    <main class="plan-grid" id="plan-grid">
+        <div class="empty-state" id="empty-state">
+            <div class="empty-icon">🍳</div>
+            <h2>Noch kein Plan erstellt</h2>
+            <p>Klicke auf <strong>„Neuer Plan"</strong>, um deinen 7-Tage Mittagsplan zu generieren.</p>
+            <button class="btn btn-primary btn-lg" id="btn-generate-empty">
+                <span class="btn-icon">🔄</span> Plan generieren
+            </button>
+        </div>
+    </main>
+
+    <!-- ===== MODAL: Generate options ===== -->
+    <div class="modal-backdrop hidden" id="modal-generate">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>🍽️ Neuen Plan generieren</h3>
+                <button class="modal-close" data-close="modal-generate">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="week-selector">
+                    <button class="week-tab active" data-offset="0"><span class="btn-icon">📅</span> <span class="btn-text">Diese Woche</span></button>
+                    <button class="week-tab" data-offset="1"><span class="btn-icon">➡️</span> <span class="btn-text">Nächste Woche</span></button>
+                </div>
+                <p>Möchtest du für bestimmte Tage eine <strong>Freie Karte</strong> setzen?</p>
+                <p class="hint">Freie Karten = Auswärts essen, Reste, etc.</p>
+                <div class="free-day-picker" id="free-day-picker"></div>
+                <div class="detail-field" style="margin-top: 0.8rem;">
+                    <label for="generate-source-mode">Rezeptquelle</label>
+                    <select id="generate-source-mode" class="input-full">
+                        <option value="all">Fixe + API-Rezepte</option>
+                        <option value="fixed_only">Nur fixe Rezepte (ohne API)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close="modal-generate">Abbrechen</button>
+                <button class="btn btn-primary" id="btn-confirm-generate">Plan generieren</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: Details ===== -->
+    <div class="modal-backdrop hidden" id="modal-details">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3>📋 Details bearbeiten</h3>
+                <button class="modal-close" data-close="modal-details">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-layout">
+                    <div class="detail-image-wrap">
+                        <img id="detail-image" src="" alt="" class="detail-image">
+                    </div>
+                    <div class="detail-meta">
+                        <div class="detail-field">
+                            <label for="detail-title-input">Titel</label>
+                            <input type="text" id="detail-title-input" class="input-full">
+                        </div>
+                        <div class="detail-field-row">
+                            <div class="detail-field">
+                                <label for="detail-diet-type">Kategorie</label>
+                                <select id="detail-diet-type" class="select-sm input-full">
+                                    <option value="meat">Fleisch</option>
+                                    <option value="fish">Fisch</option>
+                                    <option value="vegetarian">Veggie</option>
+                                    <option value="vegan">Vegan</option>
+                                    <option value="free">Frei</option>
+                                </select>
+                            </div>
+                            <div class="detail-field">
+                                <label for="detail-servings-input">Portionen</label>
+                                <input type="number" id="detail-servings-input" class="input-full" min="0" max="20">
+                            </div>
+                        </div>
+                        <div class="detail-field">
+                            <label for="detail-note">Freitext / Notiz</label>
+                            <textarea id="detail-note" class="detail-textarea" rows="3" placeholder="Eigene Notiz hinzufügen…"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <h4>🥕 Zutaten</h4>
+                    <textarea id="detail-ingredients-text" class="detail-textarea" rows="6" placeholder="Eine Zutat pro Zeile"></textarea>
+                </div>
+                <div class="detail-section">
+                    <h4>👩‍🍳 Zubereitung</h4>
+                    <textarea id="detail-instructions" class="detail-textarea" rows="8" placeholder="Anleitung hinzufügen oder ändern…"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close="modal-details">Schließen</button>
+                <button class="btn btn-primary" id="btn-detail-save">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: Swap ===== -->
+    <div class="modal-backdrop hidden" id="modal-swap">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3>🔁 Gericht tauschen – <span id="swap-day-name"></span></h3>
+                <button class="modal-close" data-close="modal-swap">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="swap-tabs">
+                    <button class="swap-tab active" data-tab="all">Alle</button>
+                    <button class="swap-tab" data-tab="fixed">Fixe Gerichte</button>
+                    <button class="swap-tab" data-tab="api">API-Gerichte</button>
+                    <button class="swap-tab" data-tab="free">Freie Karte</button>
+                </div>
+                <div id="swap-free-form" class="swap-free-form hidden">
+                    <label for="swap-free-text">Beschreibung (optional):</label>
+                    <input type="text" id="swap-free-text" placeholder="z.B. Auswärts essen, Reste…">
+                    <button class="btn btn-primary" id="btn-swap-free-confirm">Freie Karte setzen</button>
+                </div>
+                <div class="swap-list" id="swap-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: Saved plans ===== -->
+    <div class="modal-backdrop hidden" id="modal-plans">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3>📂 Gespeicherte Pläne</h3>
+                <button class="modal-close" data-close="modal-plans">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="plans-list" class="plans-list"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close="modal-plans">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: Settings / Exclude list ===== -->
+    <div class="modal-backdrop hidden" id="modal-settings">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3>⚙️ Einstellungen</h3>
+                <button class="modal-close" data-close="modal-settings">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="hint">Änderungen an der Ausschlussliste wirken sich erst nach „Plan neu generieren" aus.</p>
+
+                <div class="exclude-section">
+                    <h4>📌 Fixe Gerichte verwalten</h4>
+                    <div class="chips-container" id="chips-fixed-dishes"></div>
+                    <div class="chip-add">
+                        <input type="text" id="input-new-fixed-dish" placeholder="Neues fixes Gericht…">
+                        <select id="select-fixed-dish-diet" class="select-sm">
+                            <option value="vegetarian">Veggie</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="meat">Fleisch</option>
+                            <option value="fish">Fisch</option>
+                        </select>
+                        <input type="number" id="input-fixed-dish-time" placeholder="Min" min="5" max="180" class="input-sm">
+                        <button class="btn btn-sm btn-primary" id="btn-add-fixed-dish">+</button>
+                    </div>
+                </div>
+
+                <div class="exclude-section">
+                    <h4>🧺 Neue Zutat hinzufügen</h4>
+                    <p class="hint">Füge eine neue Zutat zum Gericht-Baukasten hinzu.</p>
+                    <div class="chip-add">
+                        <input type="text" id="input-new-ingredient-name" placeholder="Name der Zutat…">
+                        <select id="select-ingredient-category" class="select-sm">
+                            <option value="">Kategorie laden…</option>
+                        </select>
+                        <button class="btn btn-sm btn-primary" id="btn-add-new-ingredient">+</button>
+                    </div>
+                </div>
+
+                <div class="exclude-section">
+                    <h4>🚫 Ausgeschlossene Zutaten</h4>
+                    <div class="chips-container" id="chips-ingredients"></div>
+                    <div class="chip-add">
+                        <input type="text" id="input-add-ingredient" placeholder="Neue Zutat…">
+                        <button class="btn btn-sm btn-primary" id="btn-add-ingredient">+</button>
+                    </div>
+                </div>
+
+                <div class="exclude-section">
+                    <h4>🌍 Ausgeschlossene Küchen</h4>
+                    <div class="chips-container" id="chips-cuisines"></div>
+                    <div class="chip-add">
+                        <input type="text" id="input-add-cuisine" placeholder="Neue Küche…">
+                        <button class="btn btn-sm btn-primary" id="btn-add-cuisine">+</button>
+                    </div>
+                </div>
+
+                <div class="exclude-section">
+                    <h4>🏷️ Ausgeschlossene Tags</h4>
+                    <div class="chips-container" id="chips-tags"></div>
+                    <div class="chip-add">
+                        <input type="text" id="input-add-tag" placeholder="Neuer Tag…">
+                        <button class="btn btn-sm btn-primary" id="btn-add-tag">+</button>
+                    </div>
+                </div>
+
+                <div class="exclude-section">
+                    <h4>🍲 Ausgeschlossene Gerichtarten</h4>
+                    <div class="chips-container" id="chips-dishtypes"></div>
+                    <div class="chip-add">
+                        <input type="text" id="input-add-dishtype" placeholder="Neue Gerichtart…">
+                        <button class="btn btn-sm btn-primary" id="btn-add-dishtype">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close="modal-settings">Abbrechen</button>
+                <button class="btn btn-primary" id="btn-save-settings">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: Free card edit ===== -->
+    <div class="modal-backdrop hidden" id="modal-free-edit">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>✏️ Freie Karte bearbeiten</h3>
+                <button class="modal-close" data-close="modal-free-edit">&times;</button>
+            </div>
+            <div class="modal-body">
+                <label for="free-edit-text">Beschreibung:</label>
+                <input type="text" id="free-edit-text" placeholder="z.B. Auswärts essen, Reste…" class="input-full">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close="modal-free-edit">Abbrechen</button>
+                <button class="btn btn-primary" id="btn-free-edit-save">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: Gericht erstellen ===== -->
+    <div class="modal-backdrop hidden" id="modal-dish-builder">
+        <div class="modal modal-lg">
+            <div class="modal-header">
+                <h3>🍳 Gericht erstellen</h3>
+                <button class="modal-close" data-close="modal-dish-builder">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="hint">Wähle Zutaten aus den Kategorien – der Name wird automatisch vorgeschlagen.</p>
+                <div id="builder-categories"></div>
+                <div class="builder-name-wrap">
+                    <label for="builder-dish-name">Gerichtsname:</label>
+                    <input type="text" id="builder-dish-name" class="input-full" placeholder="z.B. Schnitzel mit Nudeln und Brokkoli">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-close="modal-dish-builder">Abbrechen</button>
+                <button class="btn btn-secondary" id="btn-builder-save-fixed">⭐ Als fixes Gericht speichern</button>
+                <button class="btn btn-primary" id="btn-builder-confirm">Gericht übernehmen</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <p>Familienplaner · Privat · Keine Daten an Dritte</p>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

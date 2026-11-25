@@ -1,0 +1,97 @@
+==============================================================================
+  PYTHONANYWHERE SETUP – Quick Reference
+  7-Tage Mittagsplaner
+==============================================================================
+
+▶ BENUTZERNAME überall durch deinen PythonAnywhere-Benutzernamen ersetzen!
+
+──────────────────────────────────────────────────────────────────────────────
+1. BASH-TERMINAL ÖFFNEN
+   Dashboard → Consoles → Bash
+──────────────────────────────────────────────────────────────────────────────
+
+2. CODE HOCHLADEN (Option A: Git)
+   cd ~
+   git clone https://github.com/DEIN_REPO/lunch_planner.git
+
+   ODER (Option B: ZIP-Upload über Files-Seite, dann):
+   cd ~
+   unzip lunch_planner.zip
+
+──────────────────────────────────────────────────────────────────────────────
+3. VIRTUAL ENVIRONMENT ERSTELLEN
+   mkvirtualenv lunchplanner --python=/usr/bin/python3.10
+
+──────────────────────────────────────────────────────────────────────────────
+4. DEPENDENCIES INSTALLIEREN
+   cd ~/lunch_planner
+   pip install -r requirements.txt
+
+──────────────────────────────────────────────────────────────────────────────
+5. WEB-APP ERSTELLEN
+   Dashboard → Web → Add a new web app
+   → Manual configuration → Python 3.10
+
+──────────────────────────────────────────────────────────────────────────────
+6. WSGI-DATEI BEARBEITEN
+   Klicke auf den WSGI-Datei-Link auf der Web-Seite.
+   Lösche alles und ersetze durch:
+
+   import sys, os
+   USERNAME = "BENUTZERNAME"
+   PROJECT_DIR = f"/home/{USERNAME}/lunch_planner"
+   VENV_DIR = f"/home/{USERNAME}/.virtualenvs/lunchplanner/lib/python3.10/site-packages"
+   if PROJECT_DIR not in sys.path:
+       sys.path.insert(0, PROJECT_DIR)
+   if os.path.exists(VENV_DIR):
+       sys.path.insert(0, VENV_DIR)
+   from app import app as application
+
+──────────────────────────────────────────────────────────────────────────────
+7. VIRTUALENV-PFAD EINTRAGEN (Web-Seite)
+   /home/BENUTZERNAME/.virtualenvs/lunchplanner
+
+──────────────────────────────────────────────────────────────────────────────
+8. SOURCE CODE PFAD (Web-Seite)
+   /home/BENUTZERNAME/lunch_planner
+
+──────────────────────────────────────────────────────────────────────────────
+9. STATISCHE DATEIEN (Web-Seite → Static files)
+   URL:       /static
+   Directory: /home/BENUTZERNAME/lunch_planner/static
+
+──────────────────────────────────────────────────────────────────────────────
+10. ORDNER ERSTELLEN (Bash)
+    cd ~/lunch_planner
+    mkdir -p data cache saved_plans
+
+──────────────────────────────────────────────────────────────────────────────
+11. JSON-DATEIEN PRÜFEN (Bash)
+    ls -la ~/lunch_planner/data/
+    # Erwartet: fixDishes.json, spoonacular_exclude_list.json,
+    #           spoonacular_ingredients.json
+
+──────────────────────────────────────────────────────────────────────────────
+12. APP STARTEN
+    Web-Seite → Reload (grüner Button)
+    Öffne: https://BENUTZERNAME.pythonanywhere.com
+
+==============================================================================
+  WICHTIGE PFADE
+==============================================================================
+
+Projekt:       /home/BENUTZERNAME/lunch_planner
+Virtualenv:    /home/BENUTZERNAME/.virtualenvs/lunchplanner
+WSGI-Datei:    /var/www/BENUTZERNAME_pythonanywhere_com_wsgi.py
+Error Log:     /var/log/BENUTZERNAME.pythonanywhere.com.error.log
+Server Log:    /var/log/BENUTZERNAME.pythonanywhere.com.server.log
+
+==============================================================================
+  TIPPS
+==============================================================================
+
+• Spoonacular API funktioniert (ist whitelisted auf PythonAnywhere)
+• Google Translate funktioniert (ist whitelisted auf PythonAnywhere)
+• Free-Tier muss alle 3 Monate verlängert werden
+• Bei Problemen: Error Log prüfen (Link auf Web-Seite unten)
+• Nach Code-Änderungen immer "Reload" klicken
