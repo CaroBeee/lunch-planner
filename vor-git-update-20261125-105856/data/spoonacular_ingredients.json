@@ -1,0 +1,403 @@
+{
+    "project": "Lunch Planner",
+    "provider": "spoonacular",
+    "last_updated": "2026-03-20",
+    "categories": [
+        {
+            "category": "side_dishes",
+            "items": [
+                {
+                    "original_de": "Nudeln",
+                    "query": "pasta",
+                    "alternatives": [
+                        "noodles"
+                    ]
+                },
+                {
+                    "original_de": "Kartoffeln",
+                    "query": "potato",
+                    "alternatives": [
+                        "potatoes"
+                    ]
+                },
+                {
+                    "original_de": "Spirellis",
+                    "query": "fusilli",
+                    "alternatives": [
+                        "spiral pasta"
+                    ]
+                },
+                {
+                    "original_de": "Kartoffelstampf",
+                    "query": "mashed potatoes",
+                    "alternatives": [
+                        "mashed potato"
+                    ]
+                },
+                {
+                    "original_de": "Reis",
+                    "query": "rice",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Gnocchies",
+                    "query": "gnocchi",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Ofenkartoffeln",
+                    "query": "baked potato",
+                    "alternatives": [
+                        "roasted potatoes"
+                    ]
+                },
+                {
+                    "original_de": "Hirse",
+                    "query": "millet",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Bandnudeln",
+                    "query": "tagliatelle",
+                    "alternatives": [
+                        "ribbon pasta"
+                    ]
+                },
+                {
+                    "original_de": "Pommes",
+                    "query": "french fries",
+                    "alternatives": [
+                        "fries"
+                    ]
+                },
+                {
+                    "original_de": "Polenta",
+                    "query": "polenta",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Spätzle",
+                    "query": "spatzle",
+                    "alternatives": [
+                        "spaetzle"
+                    ]
+                },
+                {
+                    "original_de": "Knödel",
+                    "query": "dumplings",
+                    "alternatives": [
+                        "potato dumplings"
+                    ]
+                },
+                {
+                    "original_de": "Gefüllte Nudeln",
+                    "query": "stuffed pasta",
+                    "alternatives": [
+                        "ravioli"
+                    ]
+                },
+                {
+                    "original_de": "Kartoffelpuffer",
+                    "query": "potato pancakes",
+                    "alternatives": [
+                        "latkes"
+                    ]
+                },
+                {
+                    "original_de": "Salzkartoffeln",
+                    "query": "boiled potatoes",
+                    "alternatives": [
+                        "potatoes boiled"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "sauces",
+            "items": [
+                {
+                    "original_de": "Kräuter-Quark",
+                    "query": "sour cream",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Tomatensoße",
+                    "query": "tomato sauce",
+                    "alternatives": [
+                        "marinara sauce"
+                    ]
+                },
+                {
+                    "original_de": "Bechamel",
+                    "query": "bechamel sauce",
+                    "alternatives": [
+                        "béchamel"
+                    ]
+                },
+                {
+                    "original_de": "Hackfleischsoße",
+                    "query": "bolognese sauce",
+                    "alternatives": [
+                        "meat sauce"
+                    ]
+                },
+                {
+                    "original_de": "Sahnesoße",
+                    "query": "cream sauce",
+                    "alternatives": []
+                }
+            ]
+        },
+        {
+            "category": "vegetables",
+            "items": [
+                {
+                    "original_de": "Spinat",
+                    "query": "spinach",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Erbsen",
+                    "query": "peas",
+                    "alternatives": [
+                        "green peas"
+                    ]
+                },
+                {
+                    "original_de": "Brokkoli",
+                    "query": "broccoli",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Kohlrabi",
+                    "query": "kohlrabi",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Karotten",
+                    "query": "carrot",
+                    "alternatives": [
+                        "carrots"
+                    ]
+                },
+                {
+                    "original_de": "Mais",
+                    "query": "corn",
+                    "alternatives": [
+                        "sweet corn"
+                    ]
+                },
+                {
+                    "original_de": "Fenchel",
+                    "query": "fennel",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Zucchini",
+                    "query": "zucchini",
+                    "alternatives": [
+                        "courgette"
+                    ]
+                },
+                {
+                    "original_de": "Blumenkohl",
+                    "query": "cauliflower",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Mangold",
+                    "query": "swiss chard",
+                    "alternatives": [
+                        "chard"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "salads",
+            "items": [
+                {
+                    "original_de": "Gem. Salat",
+                    "query": "mixed salad greens",
+                    "alternatives": [
+                        "mixed salad"
+                    ]
+                },
+                {
+                    "original_de": "Feldsalat",
+                    "query": "lamb's lettuce",
+                    "alternatives": [
+                        "mache"
+                    ]
+                },
+                {
+                    "original_de": "Gurkensalat",
+                    "query": "cucumber salad",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Karottensalat",
+                    "query": "carrot salad",
+                    "alternatives": []
+                }
+            ]
+        },
+        {
+            "category": "meat_fish",
+            "items": [
+                {
+                    "original_de": "Lachs (Markt)",
+                    "query": "salmon",
+                    "alternatives": [
+                        "fresh salmon"
+                    ]
+                },
+                {
+                    "original_de": "Backfisch",
+                    "query": "fried fish",
+                    "alternatives": [
+                        "breaded fish",
+                        "fried fish fillet"
+                    ]
+                },
+                {
+                    "original_de": "Garnelen",
+                    "query": "shrimp",
+                    "alternatives": [
+                        "prawns"
+                    ]
+                },
+                {
+                    "original_de": "Fischstäbchen",
+                    "query": "fish sticks",
+                    "alternatives": [
+                        "fish fingers"
+                    ]
+                },
+                {
+                    "original_de": "Schnitzel",
+                    "query": "schnitzel",
+                    "alternatives": [
+                        "pork schnitzel"
+                    ]
+                },
+                {
+                    "original_de": "Gefüllte Schnitzel",
+                    "query": "cordon bleu",
+                    "alternatives": [
+                        "stuffed schnitzel"
+                    ]
+                },
+                {
+                    "original_de": "Hackbällchen",
+                    "query": "meatballs",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Fleischwurst-Schnitzelchen",
+                    "query": "bologna",
+                    "alternatives": [
+                        "fried bologna"
+                    ]
+                },
+                {
+                    "original_de": "Brathähnchen",
+                    "query": "roast chicken",
+                    "alternatives": [
+                        "rotisserie chicken"
+                    ]
+                },
+                {
+                    "original_de": "Hähnchenbrust",
+                    "query": "chicken breast",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Bratwurst",
+                    "query": "bratwurst",
+                    "alternatives": [
+                        "sausage"
+                    ]
+                },
+                {
+                    "original_de": "Frikadellen",
+                    "query": "meat patties",
+                    "alternatives": [
+                        "frikadellen",
+                        "meat balls",
+                        "rissole"
+                    ]
+                },
+                {
+                    "original_de": "Gyros",
+                    "query": "gyros",
+                    "alternatives": [
+                        "gyros meat"
+                    ]
+                },
+                {
+                    "original_de": "Speck",
+                    "query": "bacon",
+                    "alternatives": [
+                        "pancetta"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "veggie",
+            "items": [
+                {
+                    "original_de": "Feta",
+                    "query": "feta cheese",
+                    "alternatives": [
+                        "feta"
+                    ]
+                },
+                {
+                    "original_de": "Halloumi",
+                    "query": "halloumi",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Tofu",
+                    "query": "tofu",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Spiegelei",
+                    "query": "fried egg",
+                    "alternatives": [
+                        "egg"
+                    ]
+                },
+                {
+                    "original_de": "Gemüsestäbchen",
+                    "query": "vegetable sticks",
+                    "alternatives": []
+                },
+                {
+                    "original_de": "Polentaschnitten",
+                    "query": "polenta sticks",
+                    "alternatives": [
+                        "polenta fries",
+                        "polenta slices"
+                    ]
+                },
+                {
+                    "original_de": "Rote Linsen",
+                    "query": "red lentils",
+                    "alternatives": [
+                        "lentils, red"
+                    ]
+                }
+            ]
+        }
+    ],
+    "missing_or_critical_items": [
+        "Smashed P. (Smashed Potatoes)",
+        "Backfisch (Fried Fish)",
+        "Polentaschnitten (Polenta sticks/slices)",
+        "Gemüsestäbchen (Vegetable sticks)"
+    ]
+}

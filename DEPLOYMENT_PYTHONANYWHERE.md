@@ -300,12 +300,86 @@ Falls leer, Dateien erneut hochladen.
 
 ## Updates einspielen
 
-### Via Git:
+### 1. Live-Daten sichern
+
+Vor dem Update im **Bash-Terminal auf PythonAnywhere** ein Backup außerhalb des
+Projektordners erstellen. So kann `git pull` die Sicherung nicht verändern:
+
+```bash
+cd ~
+BACKUP_DIR="$HOME/lunch-planner-backups"
+mkdir -p "$BACKUP_DIR"
+STAMP=$(date +%Y%m%d-%H%M%S)
+BACKUP="$BACKUP_DIR/vor-git-update-$STAMP.tar.gz"
+tar -czf "$BACKUP" -C "$HOME/lunch_planner" saved_plans data
+tar -tzf "$BACKUP" | head -30
+echo "Backup: $BACKUP"
+```
+
+Das Backup enthält gespeicherte Pläne und lokale Daten wie fixe Gerichte und
+Zutaten. Optional kann die `.tar.gz`-Datei zusätzlich über **Files** auf den
+eigenen Rechner heruntergeladen werden. Wenn du später ein neues Bash-Terminal
+öffnest, setze `BACKUP` erneut auf den ausgegebenen Archivpfad.
+
+### 2. Code aktualisieren
+
+Voraussetzung: Der neue Code wurde im Git-Repository bereits committed und
+gepusht. `git pull` lädt nur Änderungen herunter, die auf dem Remote-Repository
+liegen.
+
+**Wenn das Projekt bereits per Git geklont wurde:**
+
 ```bash
 cd ~/lunch_planner
-git pull
+git status --short
+git remote -v
+git pull --ff-only
 ```
-Danach Web-App neu laden ("Reload").
+
+Wenn `git status` lokale Änderungen zeigt oder `git pull` abbricht, nicht mit
+`reset --hard` oder `git clean` fortfahren. Erst die Änderungen prüfen und das
+Backup behalten.
+
+**Wenn der bestehende Ordner noch kein Git-Klon ist:**
+
+Den vorhandenen Ordner nicht mit `git clone` überschreiben. Nach dem Backup
+den bisherigen Stand zunächst umbenennen und dann das Repository klonen:
+
+```bash
+cd ~
+mv lunch_planner lunch_planner_vor_git
+git clone <REPO-URL> lunch_planner
+```
+
+`<REPO-URL>` durch die Repository-Adresse ersetzen. Der alte Ordner bleibt als
+zusätzliche Rückfallebene bestehen.
+
+### 3. Daten wiederherstellen und App neu laden
+
+Das Backup in den neuen/aktualisierten Projektordner entpacken:
+
+```bash
+tar -xzf "$BACKUP" -C "$HOME/lunch_planner"
+```
+
+Falls die lokale Zutatenliste zuvor in `data/spoonacular_ingredients.json`
+angepasst wurde, die gesicherte Liste auf den neuen Dateinamen übernehmen:
+
+```bash
+cp ~/lunch_planner/data/spoonacular_ingredients.json ~/lunch_planner/data/ingredients.json
+```
+
+Anschließend Abhängigkeiten aktualisieren und die Web-App im PythonAnywhere
+Dashboard mit **Reload** neu starten:
+
+```bash
+workon lunchplanner
+cd ~/lunch_planner
+pip install -r requirements.txt
+```
+
+Die Seite danach im Browser mit **Strg+F5** aktualisieren. Das Backup erst
+löschen, wenn gespeicherte Pläne und fixe Gerichte in der App geprüft wurden.
 
 ### Manuell:
 1. Geänderte Dateien über Files-Seite hochladen

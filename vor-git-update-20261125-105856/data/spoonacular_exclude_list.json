@@ -1,0 +1,56 @@
+{
+  "project": "Lunch Planner",
+  "provider": "spoonacular",
+  "description": "Exclude list for recipe search - to be used with /recipes/complexSearch endpoint",
+  "last_updated": "2026-11-16",
+  "exclude_rules": {
+    "excludeCuisine": [
+      "asian",
+      "chinese",
+      "japanese",
+      "thai",
+      "vietnamese",
+      "korean",
+      "middle eastern"
+    ],
+    "excludeDishTypes": [
+      "soup",
+      "stew"
+    ],
+    "excludeIngredients": [
+      "paprika",
+      "curry",
+      "cilantro",
+      "coriander",
+      "olives",
+      "anchovies",
+      "oysters",
+      "liver",
+      "kimchi",
+      "pepper"
+    ],
+    "excludeTags": [
+      "spicy",
+      "curry",
+      "hot",
+      "chili"
+    ]
+  },
+  "usage_example": {
+    "endpoint": "GET /recipes/complexSearch",
+    "params": {
+      "excludeIngredients": "paprika",
+      "excludeCuisine": "asian,chinese,japanese,thai,vietnamese,korean,middle eastern",
+      "tags": "NOT spicy, NOT curry",
+      "note_dishType": "Filter results where dishTypes does NOT contain 'soup' or 'stew'"
+    }
+  },
+  "notes": {
+    "paprika": "Excluded as raw ingredient via excludeIngredients parameter",
+    "scharfes Gericht": "Mapped to excludeTags: spicy, hot, chili - Spoonacular has no direct 'spicy dish' parameter",
+    "Curry": "Mapped to excludeTags: curry - covers curry-based dishes and sauces",
+    "Orientalisch": "Mapped to excludeCuisine: middle eastern - closest Spoonacular cuisine match",
+    "Asiatisch": "Mapped to excludeCuisine: asian, chinese, japanese, thai, vietnamese, korean",
+    "Suppen-Gerichte": "Mapped to excludeDishTypes: soup, stew - post-filter results where dishTypes contains 'soup' or 'stew'"
+  }
+}

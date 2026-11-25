@@ -1,0 +1,160 @@
+{
+  "name": "Plan 14.09.2026",
+  "created": "2026-09-17T09:46:50.929023",
+  "dates": {
+    "days": [
+      {
+        "date": "14.09.2026",
+        "is_weekend": false,
+        "name": "Montag"
+      },
+      {
+        "date": "15.09.2026",
+        "is_weekend": false,
+        "name": "Dienstag"
+      },
+      {
+        "date": "16.09.2026",
+        "is_weekend": false,
+        "name": "Mittwoch"
+      },
+      {
+        "date": "17.09.2026",
+        "is_weekend": false,
+        "name": "Donnerstag"
+      },
+      {
+        "date": "18.09.2026",
+        "is_weekend": false,
+        "name": "Freitag"
+      },
+      {
+        "date": "19.09.2026",
+        "is_weekend": true,
+        "name": "Samstag"
+      },
+      {
+        "date": "20.09.2026",
+        "is_weekend": true,
+        "name": "Sonntag"
+      }
+    ],
+    "end": "20.09.2026",
+    "start": "14.09.2026"
+  },
+  "plan": [
+    {
+      "analyzedInstructions": [],
+      "date": "14.09.2026",
+      "day_index": 0,
+      "day_name": "Montag",
+      "diet_type": "vegetarian",
+      "extendedIngredients": [],
+      "id": "fixed_spaghetti_alfonso",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 20,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Spaghetti Alfonso"
+    },
+    {
+      "date": "15.09.2026",
+      "day_index": 1,
+      "day_name": "Dienstag",
+      "diet_type": "fish",
+      "id": "custom_v80vao7hqc",
+      "image": "",
+      "ingredients": [
+        "Reis",
+        "Erbsen",
+        "Mais",
+        "Lachs (Markt)"
+      ],
+      "instructions_text": "",
+      "readyInMinutes": 0,
+      "servings": 4,
+      "source": "custom",
+      "title": "Lachs (Markt) mit Reis und Erbsen (+1)"
+    },
+    {
+      "date": "16.09.2026",
+      "day_index": 2,
+      "day_name": "Mittwoch",
+      "description": "Flammkuchen ",
+      "diet_type": "free",
+      "id": "free_fu0258qx2is",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 0,
+      "servings": 0,
+      "source": "free",
+      "title": "Freie Karte"
+    },
+    {
+      "date": "17.09.2026",
+      "day_index": 3,
+      "day_name": "Donnerstag",
+      "description": "Grüne Soße ",
+      "diet_type": "free",
+      "id": "free_o25fmhj49s7",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 0,
+      "servings": 0,
+      "source": "free",
+      "title": "Freie Karte"
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "18.09.2026",
+      "day_index": 4,
+      "day_name": "Freitag",
+      "diet_type": "vegetarian",
+      "extendedIngredients": [],
+      "id": "fixed_brokkoli_sesam_nudelauflauf",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 40,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Brokkoli Sesam Nudelauflauf"
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "19.09.2026",
+      "day_index": 5,
+      "day_name": "Samstag",
+      "diet_type": "vegetarian",
+      "extendedIngredients": [],
+      "id": "fixed_brotsalat",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 20,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Brotsalat"
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "20.09.2026",
+      "day_index": 6,
+      "day_name": "Sonntag",
+      "diet_type": "vegan",
+      "extendedIngredients": [],
+      "id": "fixed_gemüseeintopf",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 40,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Gemüseeintopf"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "name": "Plan 16.11.2026",
+  "created": "2026-11-19T15:28:56.071661",
+  "dates": {
+    "days": [
+      {
+        "date": "16.11.2026",
+        "is_weekend": false,
+        "name": "Montag"
+      },
+      {
+        "date": "17.11.2026",
+        "is_weekend": false,
+        "name": "Dienstag"
+      },
+      {
+        "date": "18.11.2026",
+        "is_weekend": false,
+        "name": "Mittwoch"
+      },
+      {
+        "date": "19.11.2026",
+        "is_weekend": false,
+        "name": "Donnerstag"
+      },
+      {
+        "date": "20.11.2026",
+        "is_weekend": false,
+        "name": "Freitag"
+      },
+      {
+        "date": "21.11.2026",
+        "is_weekend": true,
+        "name": "Samstag"
+      },
+      {
+        "date": "22.11.2026",
+        "is_weekend": true,
+        "name": "Sonntag"
+      }
+    ],
+    "end": "22.11.2026",
+    "start": "16.11.2026"
+  },
+  "plan": [
+    {
+      "date": "16.11.2026",
+      "day_index": 0,
+      "day_name": "Montag",
+      "diet_type": "vegetarian",
+      "id": "custom_kn0r5mcexrd",
+      "image": "",
+      "ingredients": [
+        "Nudeln",
+        "Spinat",
+        "Halloumi"
+      ],
+      "instructions_text": "",
+      "readyInMinutes": 0,
+      "servings": 4,
+      "source": "custom",
+      "title": "Halloumi mit Nudeln und Spinat"
+    },
+    {
+      "date": "17.11.2026",
+      "day_index": 1,
+      "day_name": "Dienstag",
+      "diet_type": "fish",
+      "id": "custom_7klb3nm7n3",
+      "image": "",
+      "ingredients": [
+        "Reis",
+        "Erbsen",
+        "Mais",
+        "Backfisch"
+      ],
+      "instructions_text": "",
+      "readyInMinutes": 0,
+      "servings": 4,
+      "source": "custom",
+      "title": "Backfisch mit Reis und Erbsen (+1)"
+    },
+    {
+      "date": "18.11.2026",
+      "day_index": 2,
+      "day_name": "Mittwoch",
+      "diet_type": "meat",
+      "id": "custom_3rx0yuob1a5",
+      "image": "",
+      "ingredients": [
+        "Kartoffelstampf",
+        "Feldsalat",
+        "Bratwurst"
+      ],
+      "instructions_text": "",
+      "readyInMinutes": 0,
+      "servings": 4,
+      "source": "custom",
+      "title": "Bratwurst mit Kartoffelstampf und Feldsalat"
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "19.11.2026",
+      "day_index": 3,
+      "day_name": "Donnerstag",
+      "diet_type": "meat",
+      "extendedIngredients": [],
+      "id": "fixed_nudeln_mit_tomatensoße_(hack)",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 30,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Nudeln mit Tomatensoße (Hack)"
+    },
+    {
+      "analyzedInstructions": [],
+      "diet_type": "vegan",
+      "extendedIngredients": [],
+      "id": "fixed_gemüseeintopf",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 40,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Gemüseeintopf",
+      "day_name": "Freitag",
+      "day_index": 4,
+      "date": "20.11.2026"
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "21.11.2026",
+      "day_index": 5,
+      "day_name": "Samstag",
+      "diet_type": "meat",
+      "extendedIngredients": [],
+      "id": "fixed_geschnetzeltes",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 35,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Geschnetzeltes"
+    },
+    {
+      "date": "22.11.2026",
+      "day_index": 6,
+      "day_name": "Sonntag",
+      "description": "",
+      "diet_type": "free",
+      "id": "free_usdw1va6vme",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 0,
+      "servings": 0,
+      "source": "free",
+      "title": "Freie Karte"
+    }
+  ]
+}

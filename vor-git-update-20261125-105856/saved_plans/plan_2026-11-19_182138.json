@@ -1,0 +1,160 @@
+{
+  "name": "Plan 23.11.2026",
+  "created": "2026-11-19T18:21:38.571453",
+  "dates": {
+    "days": [
+      {
+        "date": "23.11.2026",
+        "is_weekend": false,
+        "name": "Montag"
+      },
+      {
+        "date": "24.11.2026",
+        "is_weekend": false,
+        "name": "Dienstag"
+      },
+      {
+        "date": "25.11.2026",
+        "is_weekend": false,
+        "name": "Mittwoch"
+      },
+      {
+        "date": "26.11.2026",
+        "is_weekend": false,
+        "name": "Donnerstag"
+      },
+      {
+        "date": "27.11.2026",
+        "is_weekend": false,
+        "name": "Freitag"
+      },
+      {
+        "date": "28.11.2026",
+        "is_weekend": true,
+        "name": "Samstag"
+      },
+      {
+        "date": "29.11.2026",
+        "is_weekend": true,
+        "name": "Sonntag"
+      }
+    ],
+    "end": "29.11.2026",
+    "start": "23.11.2026"
+  },
+  "plan": [
+    {
+      "id": "free_omtvzju1ry",
+      "title": "Fritatta",
+      "image": "",
+      "readyInMinutes": 0,
+      "diet_type": "vegetarian",
+      "source": "free",
+      "servings": 0,
+      "ingredients": [],
+      "instructions_text": "",
+      "description": "",
+      "day_name": "Montag",
+      "day_index": 0,
+      "date": "23.11.2026",
+      "note": ""
+    },
+    {
+      "id": "custom_53v9mq4r4vd",
+      "title": "Lachs (Markt) mit Reis und Feldsalat",
+      "image": "",
+      "readyInMinutes": 0,
+      "diet_type": "fish",
+      "source": "custom",
+      "servings": 4,
+      "ingredients": [
+        "Reis",
+        "Feldsalat",
+        "Lachs (Markt)"
+      ],
+      "instructions_text": "",
+      "day_name": "Dienstag",
+      "day_index": 1,
+      "date": "24.11.2026"
+    },
+    {
+      "id": "free_jubzwnxu1xh",
+      "title": "Freie Karte",
+      "image": "",
+      "readyInMinutes": 0,
+      "diet_type": "free",
+      "source": "free",
+      "servings": 0,
+      "ingredients": [],
+      "instructions_text": "",
+      "description": "",
+      "day_name": "Mittwoch",
+      "day_index": 2,
+      "date": "25.11.2026"
+    },
+    {
+      "id": "custom_qhejbefizdb",
+      "title": "Gefüllte Nudeln mit Spinat",
+      "image": "",
+      "readyInMinutes": 0,
+      "diet_type": "vegetarian",
+      "source": "custom",
+      "servings": 4,
+      "ingredients": [
+        "Gefüllte Nudeln",
+        "Spinat"
+      ],
+      "instructions_text": "",
+      "day_name": "Donnerstag",
+      "day_index": 3,
+      "date": "26.11.2026"
+    },
+    {
+      "analyzedInstructions": [],
+      "date": "27.11.2026",
+      "day_index": 4,
+      "day_name": "Freitag",
+      "diet_type": "vegan",
+      "extendedIngredients": [],
+      "id": "fixed_gemüseeintopf",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 40,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Gemüseeintopf"
+    },
+    {
+      "id": "free_1ms3pfi0wtp",
+      "title": "Freie Karte",
+      "image": "",
+      "readyInMinutes": 0,
+      "diet_type": "free",
+      "source": "free",
+      "servings": 0,
+      "ingredients": [],
+      "instructions_text": "",
+      "description": "",
+      "day_name": "Samstag",
+      "day_index": 5,
+      "date": "28.11.2026"
+    },
+    {
+      "analyzedInstructions": [],
+      "diet_type": "meat",
+      "extendedIngredients": [],
+      "id": "fixed_burger",
+      "image": "",
+      "ingredients": [],
+      "instructions_text": "",
+      "readyInMinutes": 40,
+      "servings": 4,
+      "source": "fixed",
+      "title": "Burger",
+      "day_name": "Sonntag",
+      "day_index": 6,
+      "date": "29.11.2026"
+    }
+  ]
+}
