@@ -43,9 +43,6 @@
         <button class="btn btn-secondary" id="btn-settings" title="Einstellungen & Exclude-List">
             <span class="btn-icon">⚙️</span> <span class="btn-text">Einstellungen</span>
         </button>
-        <button class="btn btn-accent" id="btn-refresh-api" title="API-Rezepte aktualisieren">
-            <span class="btn-icon">☁️</span> <span class="btn-text">API aktualisieren</span>
-        </button>
     </nav>
 
     <!-- ===== PLAN GRID ===== -->
@@ -75,13 +72,6 @@
                 <p>Möchtest du für bestimmte Tage eine <strong>Freie Karte</strong> setzen?</p>
                 <p class="hint">Freie Karten = Auswärts essen, Reste, etc.</p>
                 <div class="free-day-picker" id="free-day-picker"></div>
-                <div class="detail-field" style="margin-top: 0.8rem;">
-                    <label for="generate-source-mode">Rezeptquelle</label>
-                    <select id="generate-source-mode" class="input-full">
-                        <option value="all">Fixe + API-Rezepte</option>
-                        <option value="fixed_only">Nur fixe Rezepte (ohne API)</option>
-                    </select>
-                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" data-close="modal-generate">Abbrechen</button>
@@ -154,9 +144,7 @@
             </div>
             <div class="modal-body">
                 <div class="swap-tabs">
-                    <button class="swap-tab active" data-tab="all">Alle</button>
-                    <button class="swap-tab" data-tab="fixed">Fixe Gerichte</button>
-                    <button class="swap-tab" data-tab="api">API-Gerichte</button>
+                    <button class="swap-tab active" data-tab="fixed">Fixe Gerichte</button>
                     <button class="swap-tab" data-tab="free">Freie Karte</button>
                 </div>
                 <div id="swap-free-form" class="swap-free-form hidden">
@@ -185,7 +173,7 @@
         </div>
     </div>
 
-    <!-- ===== MODAL: Settings / Exclude list ===== -->
+    <!-- ===== MODAL: Settings ===== -->
     <div class="modal-backdrop hidden" id="modal-settings">
         <div class="modal modal-lg">
             <div class="modal-header">
@@ -193,8 +181,6 @@
                 <button class="modal-close" data-close="modal-settings">&times;</button>
             </div>
             <div class="modal-body">
-                <p class="hint">Änderungen an der Ausschlussliste wirken sich erst nach „Plan neu generieren" aus.</p>
-
                 <div class="exclude-section">
                     <h4>📌 Fixe Gerichte verwalten</h4>
                     <div class="chips-container" id="chips-fixed-dishes"></div>
@@ -223,45 +209,9 @@
                     </div>
                 </div>
 
-                <div class="exclude-section">
-                    <h4>🚫 Ausgeschlossene Zutaten</h4>
-                    <div class="chips-container" id="chips-ingredients"></div>
-                    <div class="chip-add">
-                        <input type="text" id="input-add-ingredient" placeholder="Neue Zutat…">
-                        <button class="btn btn-sm btn-primary" id="btn-add-ingredient">+</button>
-                    </div>
-                </div>
-
-                <div class="exclude-section">
-                    <h4>🌍 Ausgeschlossene Küchen</h4>
-                    <div class="chips-container" id="chips-cuisines"></div>
-                    <div class="chip-add">
-                        <input type="text" id="input-add-cuisine" placeholder="Neue Küche…">
-                        <button class="btn btn-sm btn-primary" id="btn-add-cuisine">+</button>
-                    </div>
-                </div>
-
-                <div class="exclude-section">
-                    <h4>🏷️ Ausgeschlossene Tags</h4>
-                    <div class="chips-container" id="chips-tags"></div>
-                    <div class="chip-add">
-                        <input type="text" id="input-add-tag" placeholder="Neuer Tag…">
-                        <button class="btn btn-sm btn-primary" id="btn-add-tag">+</button>
-                    </div>
-                </div>
-
-                <div class="exclude-section">
-                    <h4>🍲 Ausgeschlossene Gerichtarten</h4>
-                    <div class="chips-container" id="chips-dishtypes"></div>
-                    <div class="chip-add">
-                        <input type="text" id="input-add-dishtype" placeholder="Neue Gerichtart…">
-                        <button class="btn btn-sm btn-primary" id="btn-add-dishtype">+</button>
-                    </div>
-                </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" data-close="modal-settings">Abbrechen</button>
-                <button class="btn btn-primary" id="btn-save-settings">Speichern</button>
+                <button class="btn btn-secondary" data-close="modal-settings">Schließen</button>
             </div>
         </div>
     </div>

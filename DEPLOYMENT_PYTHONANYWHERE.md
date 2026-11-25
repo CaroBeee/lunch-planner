@@ -14,7 +14,6 @@ Diese Anleitung beschreibt, wie der **7-Tage Mittagsplaner** kostenlos auf
 | Kosten | 0 € (Free-Tier) |
 | Python-Version | 3.10 (empfohlen) |
 | Framework | Flask (WSGI) |
-| Spoonacular API | ✅ funktioniert (ist whitelisted) |
 
 ---
 
@@ -56,8 +55,7 @@ Diese Anleitung beschreibt, wie der **7-Tage Mittagsplaner** kostenlos auf
    ├── wsgi.py
    ├── data/
    │   ├── fixDishes.json
-   │   ├── spoonacular_exclude_list.json
-   │   └── spoonacular_ingredients.json
+   │   └── ingredients.json
    ├── templates/
    │   └── index.html
    └── static/
@@ -99,11 +97,7 @@ cd ~/lunch_planner
 pip install -r requirements.txt
 ```
 
-Das installiert:
-- Flask
-- requests
-- deep-translator
-- openpyxl
+Das installiert Flask.
 
 ---
 
@@ -184,7 +178,7 @@ Falls noch nicht vorhanden, erstelle die Ordner im Bash-Terminal:
 
 ```bash
 cd ~/lunch_planner
-mkdir -p data cache saved_plans
+mkdir -p data saved_plans
 ```
 
 ---
@@ -199,8 +193,7 @@ ls -la ~/lunch_planner/data/
 
 Erwartete Dateien:
 - `fixDishes.json` – Feste Familiengerichte
-- `spoonacular_exclude_list.json` – Ausschlussliste
-- `spoonacular_ingredients.json` – Zutatenkategorien
+- `ingredients.json` – Zutatenkatalog für den Gericht-Baukasten
 
 > Falls Dateien fehlen, lade sie über die Files-Seite hoch oder kopiere sie
 > aus dem Git-Repository.
@@ -216,7 +209,6 @@ Erwartete Dateien:
 ### Erste Tests:
 - [ ] Startseite wird angezeigt
 - [ ] "Neuer Plan" generiert einen Wochenplan
-- [ ] "API aktualisieren" ruft Spoonacular auf (dauert 10–20 Sek.)
 - [ ] Plan speichern und laden funktioniert
 - [ ] Gerichte tauschen funktioniert
 
@@ -268,22 +260,12 @@ ls ~/lunch_planner/data/
 ```
 Falls leer, Dateien erneut hochladen.
 
-### ❌ Spoonacular API gibt Fehler zurück
-
-**Ursache:** API-Key ungültig oder Kontingent aufgebraucht.
-
-**Lösung:**
-1. Die Spoonacular API ist auf PythonAnywhere **whitelisted** → kein Proxy nötig
-2. Prüfe den API-Key in `planner_logic.py`
-3. Bei Quota-Fehler: Am nächsten Tag erneut versuchen
-
 ### ❌ Seite lädt sehr langsam
 
 **Ursache:** Free-Tier hat begrenzte CPU-Ressourcen.
 
 **Lösung:**
 - Erste Anfrage nach Neustart ist immer langsam (Cold Start)
-- API-Cache nutzen statt häufiger API-Aufrufe
 - Seite nach 3 Monaten erneuern (Free-Tier läuft alle 3 Monate ab)
 
 ### ❌ "Your web app has been disabled"
@@ -305,7 +287,7 @@ Falls leer, Dateien erneut hochladen.
 | **HTTPS** | ✅ Standardmäßig aktiviert |
 | **CPU** | Begrenzte tägliche CPU-Sekunden (~100s) |
 | **Bandbreite** | Ausreichend für Familien-Nutzung |
-| **Outbound HTTP** | Nur whitelisted APIs (Spoonacular ✅, Google Translate ✅) |
+| **Outbound HTTP** | Für die Planer-Funktionen nicht erforderlich |
 | **Speicher** | 512 MB Dateispeicher |
 | **Ablauf** | Alle 3 Monate manuell verlängern |
 | **Web-Apps** | 1 Web-App pro Free-Account |
@@ -337,4 +319,3 @@ Danach Web-App neu laden ("Reload").
 - [PythonAnywhere Help – Flask](https://help.pythonanywhere.com/pages/Flask/)
 - [PythonAnywhere Help – Static Files](https://help.pythonanywhere.com/pages/StaticFiles/)
 - [PythonAnywhere Help – Debugging](https://help.pythonanywhere.com/pages/DebuggingImportError/)
-- [Spoonacular API Docs](https://spoonacular.com/food-api/docs)

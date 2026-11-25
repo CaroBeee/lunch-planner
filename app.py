@@ -1,24 +1,18 @@
 """
 Lunch Planner - 7-Day Family Meal Planner
-Flask backend with Spoonacular API integration
+Flask backend for meal planning
 """
 
 import os
 import json
-import random
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 from flask import Flask, render_template, jsonify, request
 
 from planner_logic import (
     generate_weekly_plan,
     get_swap_candidates,
     load_fixed_dishes,
-    load_exclude_list,
-    save_exclude_list,
-    load_cached_recipes,
-    save_cached_recipes,
-    fetch_and_cache_api_recipes,
     get_current_week_dates,
 )
 
@@ -31,9 +25,10 @@ app.config["JSON_AS_ASCII"] = False
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 SAVED_PLANS_DIR = os.path.join(BASE_DIR, "saved_plans")
-CACHE_DIR = os.path.join(BASE_DIR, "cache")
+INGREDIENTS_FILENAME = "ingredients.json"
+LEGACY_INGREDIENTS_FILENAME = "spoonacular_ingredients.json"
 
-for d in [DATA_DIR, SAVED_PLANS_DIR, CACHE_DIR]:
+for d in [DATA_DIR, SAVED_PLANS_DIR]:
     os.makedirs(d, exist_ok=True)
 
 logging.basicConfig(level=logging.INFO)
@@ -59,14 +54,11 @@ def api_generate_plan():
         body = request.get_json(silent=True) or {}
         free_days = body.get("free_days", [])  # list of day indices 0-6 for free cards
         week_offset = int(body.get("week_offset", 0))
-        include_api_recipes = bool(body.get("include_api_recipes", True))
 
         plan = generate_weekly_plan(
             DATA_DIR,
-            CACHE_DIR,
             free_days=free_days,
             week_offset=week_offset,
-            include_api_recipes=include_api_recipes,
         )
         return jsonify({"success": True, "plan": plan})
     except Exception as e:
@@ -83,13 +75,8 @@ def api_swap_day():
     """Return swap candidates for a given day index."""
     try:
         body = request.get_json()
-        day_index = body.get("day_index", 0)
         current_titles = body.get("current_titles", [])
-        swap_type = body.get("swap_type", "all")  # "fixed", "api", "free", "all"
-
-        candidates = get_swap_candidates(
-            DATA_DIR, CACHE_DIR, current_titles, swap_type
-        )
+        candidates = get_swap_candidates(DATA_DIR, current_titles)
         return jsonify({"success": True, "candidates": candidates})
     except Exception as e:
         logger.exception("Error fetching swap candidates")
@@ -183,87 +170,6 @@ def api_delete_plan(filename):
 
 
 # ---------------------------------------------------------------------------
-# API – Exclude list management
-# ---------------------------------------------------------------------------
-
-@app.route("/api/exclude-list", methods=["GET"])
-def api_get_exclude_list():
-    """Get the current exclude list."""
-    try:
-        data = load_exclude_list(DATA_DIR)
-        return jsonify({"success": True, "exclude_rules": data.get("exclude_rules", {})})
-    except Exception as e:
-        logger.exception("Error loading exclude list")
-        return jsonify({"success": False, "error": str(e)}), 500
-
-
-@app.route("/api/exclude-list", methods=["POST"])
-def api_update_exclude_list():
-    """Update the exclude list."""
-    try:
-        body = request.get_json()
-        exclude_rules = body.get("exclude_rules", {})
-        save_exclude_list(DATA_DIR, exclude_rules)
-        return jsonify({"success": True})
-    except Exception as e:
-        logger.exception("Error saving exclude list")
-        return jsonify({"success": False, "error": str(e)}), 500
-
-
-# ---------------------------------------------------------------------------
-# API – Spoonacular cache refresh
-# ---------------------------------------------------------------------------
-
-@app.route("/api/refresh-cache", methods=["POST"])
-def api_refresh_cache():
-    """Manually refresh the Spoonacular recipe cache."""
-    try:
-        result = fetch_and_cache_api_recipes(DATA_DIR, CACHE_DIR)
-        # result is now a structured dict from planner_logic
-        if result.get("success"):
-            return jsonify({
-                "success": True,
-                "cached_count": result["cached_count"],
-            })
-        else:
-            # API error occurred – return error details to frontend
-            return jsonify({
-                "success": False,
-                "error_type": result.get("error_type", "unknown"),
-                "message": result.get("message", "Unbekannter Fehler"),
-                "cached_count": result.get("cached_count", 0),
-                "used_fallback": result.get("used_fallback", False),
-            })
-    except Exception as e:
-        logger.exception("Error refreshing cache")
-        return jsonify({
-            "success": False,
-            "error_type": "unknown",
-            "message": str(e),
-            "cached_count": 0,
-            "used_fallback": False,
-        }), 500
-
-
-@app.route("/api/cache-info", methods=["GET"])
-def api_cache_info():
-    """Return info about the recipe cache."""
-    try:
-        cache_file = os.path.join(CACHE_DIR, "spoonacular_recipes.json")
-        if os.path.exists(cache_file):
-            with open(cache_file, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            return jsonify({
-                "success": True,
-                "count": len(data.get("recipes", [])),
-                "last_updated": data.get("last_updated", ""),
-            })
-        return jsonify({"success": True, "count": 0, "last_updated": ""})
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
-
-
-# ---------------------------------------------------------------------------
 # API – Week dates helper
 # ---------------------------------------------------------------------------
 
@@ -282,7 +188,7 @@ def api_week_dates():
 @app.route("/api/ingredients", methods=["GET"])
 def api_ingredients():
     try:
-        path = os.path.join(DATA_DIR, "spoonacular_ingredients.json")
+        path = _ingredients_path()
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
         return jsonify({"success": True, "categories": data.get("categories", [])})
@@ -293,21 +199,26 @@ def api_ingredients():
 
 @app.route("/api/ingredients/add", methods=["POST"])
 def api_add_ingredient():
-    """Add a new ingredient to a category in spoonacular_ingredients.json."""
+    """Add a new ingredient to a category in the local ingredient catalog."""
     try:
-        body = request.get_json()
-        category_key = body.get("category_key", "")
-        item_name = body.get("name", "").strip()
+        body = request.get_json(silent=True) or {}
+        category_key = (body.get("category") or body.get("category_key") or "").strip()
+        item_name = (body.get("name") or "").strip()
         if not category_key or not item_name:
-            return jsonify({"success": False, "error": "category_key und name sind erforderlich."}), 400
-        path = os.path.join(DATA_DIR, "spoonacular_ingredients.json")
+            return jsonify({"success": False, "error": "Kategorie und Name sind erforderlich."}), 400
+        path = _ingredients_path()
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
         found = False
         for cat in data.get("categories", []):
-            if cat.get("key") == category_key:
-                if item_name not in cat.get("items", []):
-                    cat.setdefault("items", []).append(item_name)
+            if cat.get("category", cat.get("key")) == category_key:
+                items = cat.setdefault("items", [])
+                if not any(item.get("original_de") == item_name for item in items):
+                    items.append({
+                        "original_de": item_name,
+                        "query": item_name,
+                        "alternatives": [],
+                    })
                 found = True
                 break
         if not found:
@@ -318,6 +229,15 @@ def api_add_ingredient():
     except Exception as e:
         logger.exception("Error adding ingredient")
         return jsonify({"success": False, "error": str(e)}), 500
+
+
+def _ingredients_path():
+    """Use the renamed catalog, or keep existing deployments on their legacy file."""
+    path = os.path.join(DATA_DIR, INGREDIENTS_FILENAME)
+    legacy_path = os.path.join(DATA_DIR, LEGACY_INGREDIENTS_FILENAME)
+    if os.path.exists(path) or not os.path.exists(legacy_path):
+        return path
+    return legacy_path
 
 
 # ---------------------------------------------------------------------------
@@ -338,9 +258,9 @@ def api_get_fixed_dishes():
 def api_save_fixed_dish():
     """Add a new fixed dish or update existing in fixDishes.json."""
     try:
-        body = request.get_json()
-        dish = body.get("dish", {})
-        title = dish.get("title", "").strip()
+        body = request.get_json(silent=True) or {}
+        dish = body.get("dish", body)
+        title = (dish.get("title") or "").strip()
         if not title:
             return jsonify({"success": False, "error": "Titel ist erforderlich."}), 400
         path = os.path.join(DATA_DIR, "fixDishes.json")

@@ -6,7 +6,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 30,
-      "diets": ["meat"],
+      "diets": [
+        "meat"
+      ],
       "instructions": "",
       "lowFodmap": false,
       "occasions": [],
@@ -22,7 +24,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 25,
-      "diets": ["meat"],
+      "diets": [
+        "meat"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -32,7 +36,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 20,
-      "diets": ["vegetarian"],
+      "diets": [
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -42,7 +48,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 35,
-      "diets": ["meat"],
+      "diets": [
+        "meat"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -52,7 +60,10 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 30,
-      "diets": ["meat", "vegetarian"],
+      "diets": [
+        "meat",
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -62,7 +73,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 35,
-      "diets": ["meat"],
+      "diets": [
+        "meat"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -72,7 +85,10 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 30,
-      "diets": ["meat", "vegetarian"],
+      "diets": [
+        "meat",
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -82,7 +98,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 40,
-      "diets": ["vegetarian"],
+      "diets": [
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -92,7 +110,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 25,
-      "diets": ["vegetarian"],
+      "diets": [
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -102,7 +122,10 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 60,
-      "diets": ["meat", "vegetarian"],
+      "diets": [
+        "meat",
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -112,7 +135,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 25,
-      "diets": ["fish"],
+      "diets": [
+        "fish"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -122,7 +147,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 20,
-      "diets": ["vegetarian"],
+      "diets": [
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -132,7 +159,10 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 75,
-      "diets": ["meat", "vegetarian"],
+      "diets": [
+        "meat",
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -142,7 +172,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 40,
-      "diets": ["meat"],
+      "diets": [
+        "meat"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -152,7 +184,10 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 30,
-      "diets": ["meat", "vegetarian"],
+      "diets": [
+        "meat",
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -162,7 +197,10 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 25,
-      "diets": ["meat", "vegetarian"],
+      "diets": [
+        "meat",
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -172,7 +210,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 40,
-      "diets": ["vegan"],
+      "diets": [
+        "vegan"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -182,7 +222,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 35,
-      "diets": ["vegetarian"],
+      "diets": [
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -192,7 +234,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 35,
-      "diets": ["vegan"],
+      "diets": [
+        "vegan"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -202,7 +246,9 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 30,
-      "diets": ["vegetarian"],
+      "diets": [
+        "vegetarian"
+      ],
       "extendedIngredients": [],
       "analyzedInstructions": []
     },
@@ -212,8 +258,14 @@
       "image": "",
       "imageType": "jpg",
       "readyInMinutes": 30,
-      "diets": ["vegetarian"],
-      "extendedIngredients": ["Kartoffen", "Kräuterquark", "Kräuterbutter"],
+      "diets": [
+        "vegetarian"
+      ],
+      "extendedIngredients": [
+        "Kartoffen",
+        "Kräuterquark",
+        "Kräuterbutter"
+      ],
       "analyzedInstructions": []
     }
   ]

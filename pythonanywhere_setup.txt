@@ -63,13 +63,12 @@
 ──────────────────────────────────────────────────────────────────────────────
 10. ORDNER ERSTELLEN (Bash)
     cd ~/lunch_planner
-    mkdir -p data cache saved_plans
+    mkdir -p data saved_plans
 
 ──────────────────────────────────────────────────────────────────────────────
 11. JSON-DATEIEN PRÜFEN (Bash)
     ls -la ~/lunch_planner/data/
-    # Erwartet: fixDishes.json, spoonacular_exclude_list.json,
-    #           spoonacular_ingredients.json
+    # Erwartet: fixDishes.json, ingredients.json
 
 ──────────────────────────────────────────────────────────────────────────────
 12. APP STARTEN
@@ -90,8 +89,6 @@ Server Log:    /var/log/BENUTZERNAME.pythonanywhere.com.server.log
   TIPPS
 ==============================================================================
 
-• Spoonacular API funktioniert (ist whitelisted auf PythonAnywhere)
-• Google Translate funktioniert (ist whitelisted auf PythonAnywhere)
 • Free-Tier muss alle 3 Monate verlängert werden
 • Bei Problemen: Error Log prüfen (Link auf Web-Seite unten)
 • Nach Code-Änderungen immer "Reload" klicken

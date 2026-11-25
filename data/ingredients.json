@@ -1,6 +1,6 @@
 {
     "project": "Lunch Planner",
-    "provider": "spoonacular",
+    "provider": "local",
     "last_updated": "2026-03-20",
     "categories": [
         {

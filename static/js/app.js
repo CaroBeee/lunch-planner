@@ -11,7 +11,6 @@ let currentDates = {}; // { start, end, days }
 let swapDayIndex = null; // index of the day being swapped
 let detailEditIndex = null;
 let editingFreeIndex = null; // index of free card being edited
-let excludeRules = {}; // current exclude list data
 let builderDayIndex = null;
 let ingredientsData = [];
 let selectedWeekOffset = 0; // 0 = this week, 1 = next week
@@ -84,45 +83,6 @@ function showToast(message, type = "success", duration) {
   setTimeout(() => toast.remove(), dur + 500);
 }
 
-/**
- * Map an API error_type to a user-friendly German toast.
- */
-const API_ERROR_MESSAGES = {
-  quota_exceeded: {
-    text: "⚠️ Dein Spoonacular API-Kontingent ist aufgebraucht. Die App nutzt jetzt gecachte Rezepte. Versuche es morgen erneut.",
-    toast: "quota",
-  },
-  invalid_key: {
-    text: "🔑 Ungültiger API-Key. Bitte überprüfe deinen Spoonacular API-Key in der Konfiguration.",
-    toast: "key",
-  },
-  service_unavailable: {
-    text: "🌐 Spoonacular API ist momentan nicht verfügbar. Offline-Modus aktiv.",
-    toast: "offline",
-  },
-  network_error: {
-    text: "📡 Keine Verbindung zur Spoonacular API möglich. Bitte überprüfe deine Internetverbindung.",
-    toast: "network",
-  },
-};
-
-function showApiError(data) {
-  const errorType = data.error_type || "unknown";
-  const mapping = API_ERROR_MESSAGES[errorType];
-  if (mapping) {
-    let msg = mapping.text;
-    if (data.used_fallback && data.cached_count > 0) {
-      msg += `<br><small>ℹ️ ${data.cached_count} gecachte Rezepte werden verwendet.</small>`;
-    }
-    showToast(msg, mapping.toast);
-  } else {
-    showToast(
-      `❌ API-Fehler: ${data.message || "Unbekannter Fehler"}`,
-      "error",
-    );
-  }
-}
-
 function openModal(id) {
   document.getElementById(id).classList.remove("hidden");
 }
@@ -162,7 +122,16 @@ function getDietBadgeHTML(dietType) {
 }
 
 function getImageSrc(entry) {
-  if (entry.image && entry.image.startsWith("http")) return entry.image;
+  if (entry.image && entry.image.startsWith("http")) {
+    if (
+      /^https?:\/\/(?:[a-z0-9-]+\.)*spoonacular\.com(?:\/|$)/i.test(
+        entry.image,
+      )
+    ) {
+      return "";
+    }
+    return entry.image;
+  }
   if (entry.image && entry.image.length > 5)
     return `https://miro.medium.com/v2/resize:fit:1400/1*WHfZH2ok8Ti2uIYoeslm6Q.jpeg || "jpg"}`;
   return "";
@@ -345,8 +314,6 @@ function openGenerateModal() {
     btn.addEventListener("click", () => btn.classList.toggle("selected"));
     picker.appendChild(btn);
   });
-  const sourceMode = $("#generate-source-mode");
-  if (sourceMode) sourceMode.value = "all";
   $$(".week-tab").forEach((tab) => {
     tab.classList.toggle(
       "active",
@@ -365,7 +332,6 @@ async function generatePlan() {
   const selected = [...$$("#free-day-picker .free-day-btn.selected")].map((b) =>
     parseInt(b.dataset.idx),
   );
-  const sourceMode = $("#generate-source-mode")?.value || "all";
   closeModal("modal-generate");
   showLoading("Plan wird generiert…");
   try {
@@ -375,16 +341,11 @@ async function generatePlan() {
       body: JSON.stringify({
         free_days: selected,
         week_offset: selectedWeekOffset,
-        include_api_recipes: sourceMode !== "fixed_only",
       }),
     });
     const data = await resp.json();
     if (!data.success) {
-      if (data.error_type) {
-        showApiError(data);
-      } else {
-        showToast(`❌ ${data.error || "Fehler beim Generieren"}`, "error");
-      }
+      showToast(`❌ ${data.error || "Fehler beim Generieren"}`, "error");
       return;
     }
     currentPlan = data.plan;
@@ -489,7 +450,7 @@ function openSwapModal(idx) {
 
   // Reset tabs
   $$(".swap-tab").forEach((t) => t.classList.remove("active"));
-  $(".swap-tab[data-tab='all']").classList.add("active");
+  $(".swap-tab[data-tab='fixed']").classList.add("active");
   $("#swap-free-form").classList.add("hidden");
 
   loadSwapCandidates("all");
@@ -513,9 +474,7 @@ async function loadSwapCandidates(type) {
     const data = await apiCall("/api/swap", {
       method: "POST",
       body: JSON.stringify({
-        day_index: swapDayIndex,
         current_titles: titles,
-        swap_type: type,
       }),
     });
     renderSwapList(data.candidates);
@@ -544,7 +503,7 @@ function renderSwapList(candidates) {
                 <div class="swap-item-meta">
                     <span class="card-diet-badge ${info.class}" style="font-size:0.7rem">${info.emoji} ${info.label}</span>
                     ${c.readyInMinutes ? `<span>⏱️ ${c.readyInMinutes} Min</span>` : ""}
-                    <span style="color:#aaa">${c.source === "fixed" ? "📌 Eigenes" : "☁️ API"}</span>
+                    <span style="color:#aaa">📌 Eigenes</span>
                 </div>
             </div>`;
     item.addEventListener("click", () => swapDish(c));
@@ -923,88 +882,19 @@ async function deletePlan(filename) {
 }
 
 // ---------------------------------------------------------------------------
-// Settings / Exclude list
+// Settings
 // ---------------------------------------------------------------------------
 
 async function openSettings() {
   showLoading("Einstellungen laden…");
   try {
-    const [excludeData, fixedData, ingredData] = await Promise.all([
-      apiCall("/api/exclude-list"),
+    const [fixedData, ingredData] = await Promise.all([
       apiCall("/api/fixed-dishes"),
       apiCall("/api/ingredients"),
     ]);
-    excludeRules = excludeData.exclude_rules || {};
-    renderExcludeChips(
-      "chips-ingredients",
-      excludeRules.excludeIngredients || [],
-      "excludeIngredients",
-    );
-    renderExcludeChips(
-      "chips-cuisines",
-      excludeRules.excludeCuisine || [],
-      "excludeCuisine",
-    );
-    renderExcludeChips(
-      "chips-tags",
-      excludeRules.excludeTags || [],
-      "excludeTags",
-    );
-    renderExcludeChips(
-      "chips-dishtypes",
-      excludeRules.excludeDishTypes || [],
-      "excludeDishTypes",
-    );
     renderFixedDishChips(fixedData.dishes || []);
     populateCategoryDropdown(ingredData.categories || []);
     openModal("modal-settings");
-  } catch (err) {
-    showToast(err.message, "error");
-  } finally {
-    hideLoading();
-  }
-}
-
-function renderExcludeChips(containerId, items, ruleKey) {
-  const container = document.getElementById(containerId);
-  container.innerHTML = "";
-  items.forEach((item, idx) => {
-    const chip = document.createElement("span");
-    chip.className = "chip";
-    chip.innerHTML = `${item} <button class="chip-remove" data-key="${ruleKey}" data-idx="${idx}">&times;</button>`;
-    container.appendChild(chip);
-  });
-  container.querySelectorAll(".chip-remove").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const key = e.currentTarget.dataset.key;
-      const i = parseInt(e.currentTarget.dataset.idx);
-      excludeRules[key].splice(i, 1);
-      renderExcludeChips(containerId, excludeRules[key], key);
-    });
-  });
-}
-
-function addExcludeItem(inputId, ruleKey, containerId) {
-  const input = document.getElementById(inputId);
-  const val = input.value.trim();
-  if (!val) return;
-  if (!excludeRules[ruleKey]) excludeRules[ruleKey] = [];
-  if (!excludeRules[ruleKey].includes(val)) {
-    excludeRules[ruleKey].push(val);
-  }
-  input.value = "";
-  renderExcludeChips(containerId, excludeRules[ruleKey], ruleKey);
-}
-
-async function saveSettings() {
-  showLoading("Einstellungen speichern…");
-  try {
-    await apiCall("/api/exclude-list", {
-      method: "POST",
-      body: JSON.stringify({ exclude_rules: excludeRules }),
-    });
-    closeModal("modal-settings");
-    showToast("Einstellungen gespeichert! ⚙️");
   } catch (err) {
     showToast(err.message, "error");
   } finally {
@@ -1068,8 +958,8 @@ function populateCategoryDropdown(categories) {
   sel.innerHTML = "";
   categories.forEach((cat) => {
     const opt = document.createElement("option");
-    opt.value = cat;
-    opt.textContent = cat;
+    opt.value = cat.category;
+    opt.textContent = BUILDER_CATEGORY_LABELS[cat.category] || cat.category;
     sel.appendChild(opt);
   });
 }
@@ -1094,33 +984,6 @@ async function addNewIngredient() {
 }
 
 // ---------------------------------------------------------------------------
-// API refresh
-// ---------------------------------------------------------------------------
-
-async function refreshApiCache() {
-  if (!confirm("API-Rezepte aktualisieren? Das kann einen Moment dauern."))
-    return;
-  showLoading("API-Rezepte werden aktualisiert…");
-  try {
-    const resp = await fetch("/api/refresh-cache", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    });
-    const data = await resp.json();
-    if (data.success) {
-      showToast(`${data.cached_count} Rezepte gecacht! ☁️`, "success");
-    } else {
-      // Use structured error feedback
-      showApiError(data);
-    }
-  } catch (err) {
-    showToast("📡 Netzwerkfehler: " + err.message, "network");
-  } finally {
-    hideLoading();
-  }
-}
-
-// ---------------------------------------------------------------------------
 // Event listeners
 // ---------------------------------------------------------------------------
 
@@ -1131,7 +994,6 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#btn-save-plan").addEventListener("click", savePlan);
   $("#btn-load-plans").addEventListener("click", loadPlansList);
   $("#btn-settings").addEventListener("click", openSettings);
-  $("#btn-refresh-api").addEventListener("click", refreshApiCache);
 
   // Empty state button
   const emptyBtn = $("#btn-generate-empty");
@@ -1160,38 +1022,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Settings
   $("#btn-add-fixed-dish").addEventListener("click", addFixedDish);
   $("#btn-add-new-ingredient").addEventListener("click", addNewIngredient);
-  $("#btn-add-ingredient").addEventListener("click", () =>
-    addExcludeItem(
-      "input-add-ingredient",
-      "excludeIngredients",
-      "chips-ingredients",
-    ),
-  );
-  $("#btn-add-cuisine").addEventListener("click", () =>
-    addExcludeItem("input-add-cuisine", "excludeCuisine", "chips-cuisines"),
-  );
-  $("#btn-add-tag").addEventListener("click", () =>
-    addExcludeItem("input-add-tag", "excludeTags", "chips-tags"),
-  );
-  $("#btn-add-dishtype").addEventListener("click", () =>
-    addExcludeItem("input-add-dishtype", "excludeDishTypes", "chips-dishtypes"),
-  );
-  $("#btn-save-settings").addEventListener("click", saveSettings);
-
-  // Enter key for chip inputs
-  [
-    "input-add-ingredient",
-    "input-add-cuisine",
-    "input-add-tag",
-    "input-add-dishtype",
-  ].forEach((id) => {
-    document.getElementById(id).addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        e.currentTarget.nextElementSibling.click();
-      }
-    });
-  });
 
   // Modal close buttons
   $$("[data-close]").forEach((btn) => {
